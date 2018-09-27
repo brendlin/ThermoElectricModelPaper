@@ -31,6 +31,8 @@ Before making new changes, it's good to see if anything changed on the "remote" 
 
     git pull
 
+### Dealing with merge conflicts
+
 Sometimes you will get "merge conflicts" when trying to pull new code from the remote -- you can resolve these via the following:
 
     git stash # stashes your local commits
@@ -38,3 +40,4 @@ Sometimes you will get "merge conflicts" when trying to pull new code from the r
     git stash apply # puts your local commits back on top
     ...
 
+You may need to resolve conflicts between your local commits and the remote version -- you can see which conflicts exist by running `git diff`.
