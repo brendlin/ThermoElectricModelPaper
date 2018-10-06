@@ -35,3 +35,6 @@ run_pdflatex: $(BASENAME).pdf
 %.bbl:  %.tex *.bib
 	$(LATEX) $<
 	$(BIBTEX) $<
+
+clean :
+	-rm *.aux *.bbl *.blg *.log *.pdf *.spl

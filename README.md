@@ -7,6 +7,13 @@ Below is a brief description of how to use the package:
 
     git clone ssh://git@gitlab.cern.ch:7999/brendlin/ThermoElectricModelPaper.git
     make
+
+### Cleaning up and re-compiling
+
+You can clean up the latex auxiliary files and re-make the pdf using:
+
+    make clean;
+    make
     
 ### Updating files
 
