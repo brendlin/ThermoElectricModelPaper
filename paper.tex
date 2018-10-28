@@ -1,10 +1,13 @@
 
 \documentclass[preprint]{elsarticle/elsarticle}
+\usepackage[margin=2.5cm]{geometry}
 
 %% \usepackage[backend=biber]{biblatex}
 %% \addbibresource{paper.bib}
 \usepackage[outdir=./]{epstopdf}
 \usepackage{amsmath}
+\usepackage{subfig} %% for subfigures (e.g. (a), (b))
+\usepackage{hyperref} %% for \url
 
 \begin{document}
 
@@ -44,7 +47,10 @@ Silicon detector \sep Thermal runaway \sep Thermal management \sep Cooling
 \section{Other model inputs}
 \input{sections/other_inputs.tex}
 
-\section{Outputs of the thermal model}
+\section{Running the model}
+\input{sections/running_the_model.tex}
+
+\section{Outputs of the thermoelectric model}
 \input{sections/outputs.tex}
 
 \section{Model performance verification}
