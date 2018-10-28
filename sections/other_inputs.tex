@@ -8,9 +8,20 @@ The DCDC converter (FEAST) supplies a low-voltage (1.5~V) current to the ABC130 
 chips on the module.
 The efficiency of the FEAST depends on its temperature as well as the output (load) current
 load delivered to the front-end chips. To correctly model the FEAST efficiency, experimental
-measurements are performed to characterize the dependence, and fitted with a functional form with
-sufficient parameters to ensure reasonable agreement. Figure~\ref{fig:feast_eff} depicts the
-FEAST efficiency data and the parameterization used in the model.
+measurements are performed to characterize the dependence and fitted with a functional form.
+
+To measure the FEAST efficiency, the FEAST power board was glued to an aluminum cold plate, cooled
+with CO$_2$, an powered with the nominal working input and output voltages (11~V input, 1.5~V output).
+The temperature of the FEAST is measured with an NTC thermistor and PTAT sensor residing on the FEAST,
+for a range of load currents up to the maximum design current of 4A\footnote
+{
+FEAST data spreadsheet: \url{http://project-dcdc.web.cern.ch/project-dcdc/public/Documents/FEASTMod_Datasheet.pdf}.
+Cite?
+}.
+
+The data is then fit with a function with sufficient parameters to ensure reasonable agreement; the
+choice of functional form has no physical interpretation. Figure~\ref{fig:feast_eff} depicts the
+FEAST efficiency data and the parameterized fit used in the model.
 
 \begin{figure}[ht]
 \centering
