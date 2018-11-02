@@ -35,8 +35,22 @@ Fig.~\ref{fig:endcapgeometry} depicts the geometry of the endcap petal.
 \begin{figure}[ht]
 \centering
 %\includegraphics[width=0.6\linewidth]{figures/Thermalmodel.pdf}
-\caption{Barrel strip geometry}
+\caption{Endcap strip geometry}
 \label{fig:endcapgeometry}
 \end{figure}
 
 \subsection{Radiation environment}
+A key input to the calculation is the radiation environment of the strip system, as several inputs depend on radiation damage effects. The sensor leakage current is a function of the fluence expressed in 1~MeV neutron-equivalents, and the TID effect on the digital chip current will be parametrized as a function of the total ionizing dose rate (more details on its dependencies can be found in section xxx). 
+
+Both these 
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.48\linewidth]{figures/fluence.pdf}\quad
+\includegraphics[width=0.48\linewidth]{figures/TID.pdf}
+\caption{ATLAS ITk radiation environment. 1~MeV neutron equivalent fluence (left) and total ionizing dose (right). Both plots are for an integrated luminosity of 4000~fb$^{-1}$ (ref strip TDR).}
+\label{fig:radiation}
+\end{figure}
+
+
