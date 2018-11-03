@@ -17,8 +17,8 @@ In the barrel the detector modules are made of square sensors ($96.85\times 96.7
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.4\linewidth]{figures/barrelmodule.pdf}
-\caption{Barrel strip geometry}
+\includegraphics[width=0.8\linewidth]{figures/stave.pdf}
+\caption{Strip barrel local support geometry. On the left a complete stave is shown (note the end-of-structure card in the foreground). The right picture shows a detailed cross-section through the stave with the two cooling pipes visible inside the core. }
 \label{fig:barrelgeometry}
 \end{figure}
 
@@ -42,8 +42,7 @@ Fig.~\ref{fig:endcapgeometry} depicts the geometry of the endcap petal.
 \subsection{Radiation environment}
 A key input to the calculation is the radiation environment of the strip system, as several inputs depend on radiation damage effects. The sensor leakage current is a function of the fluence expressed in 1~MeV neutron-equivalents, and the TID effect on the digital chip current will be parametrized as a function of the total ionizing dose rate (more details on its dependencies can be found in section xxx). 
 
-Both these 
-
+As can be seen in figure~\ref{fig:radiation}, both of these quantities display a weak dependence on $z$ in the barrel, whereas they vary significantly along $r$ over the length of the endcap petals. Because of this, and the linear uniformity of the stave compared to the more complex geometry along a petal, we modelled only two types of modules for the barrel (a generic module along the linear part of the stave and the module next to the end-of-structure card), but six different types of modules in a petal.
 
 \begin{figure}[ht]
 \centering
