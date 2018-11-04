@@ -1,10 +1,10 @@
 
-\subsection{Operational scenarios}
+\subsection{Operational scenarios}\label{sec:opscenarios}
 To study the different aspects of our predictions for the operation of the ITk strip system throughout its lifetime we performed the calculation of the system parameters over the expected 14 years of operation in monthly steps. Time-dependent inputs to the calculations were given from the expected performance of the LHC (figure~\ref{fig:opscenarios}a) and different profiles for the cooling temperature. We studied flat cooling temperature scenarios at different temperatures starting at -35$^\circ$C, the lowest evaporation temperature achievable with the ITk evaporative CO$_2$ cooling system, and a `ramp' scenario, where the cooling temperature starts at 0$^\circ$C and gradually is lowered down to -35$^\circ$C (figure~\ref{fig:opscenarios}b).
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.4\linewidth]{figures/LHCperformance.pdf}\quad
+\includegraphics[width=0.4\linewidth]{figures/LHCperformance.pdf}\quad\quad
 \includegraphics[width=0.4\linewidth]{figures/coolingramp.pdf}
 \caption{Expected LHC performance (left) and cooling ramp' scenario for the cooling temperatures (right). Year-long shutdowns of the LHC are anticipated in years 5 and 9.}
 \label{fig:opscenarios}
@@ -25,10 +25,36 @@ Thermal impedance & 10\% & Local support build tolerances\\
 Digital current & 20\% & Final chip performance and parametrization of TID effect\\
 Analog current & 5\% & Final chip performance\\
 Tape impedance & 10\% & Electrical tape manufacturing tolerances\\
-Bias voltage & 700~V & Increased bias voltage to maintain S/N\\
+Bias voltage & 700~V & Increased bias voltage from 500~V to maintain S/N\\
 \end{tabular}
 \end{table}
 
-(Specifications using safety factor scenarios. Specifications for modules, global sytem requirements.
+\subsection{Results}
+The thermo-electrical model provides a large range of predictions for the operation of the strip system. A detailed discussion of all results would only be of interest for ITk strip community members and is beyond the scope of this article. Instead we will present here a subset of results to demonstrate the capabilities and use of the thermo-electrical model for the design of the detector system.
+\subsubsection{Module properties}
+\subsubsection{System properties}
+One of the key concerns for the design of the strip system is thermal stability of the system. If the cooling temperature is too high to limit the leakage power from the radiation-damaged sensors to a level where it can still be removed the system is unstable (it goes into `thermal runaway'). In this case there is no solution to the set of equations in the thermo-electrical model any more and the numerical search for a solution fails. In the barrel strip system this happens in the last year of operation at a cooling temperature of -15$^\circ$C under nominal conditions, and at -25$^\circ$C (in year 13) with safety factors applied. As the design cooling temperature of the ITk cooling system is -35$^\circ$C we have confidence that the ITk strip system has sufficient margin for thermal stability.  
+
+Beyond the issue of stability, the thermo-electrical model delivers predictions for the development of current and power requirements for the overall system. Some of the predictions are shown in figure~\ref{fig:systemperformance}. 
+
+\begin{figure}[ht]
+\centering
+%\includegraphics[width=0.4\linewidth]{figures/}
+\caption{Examples for system performance predictions.}
+\label{fig:systemperformance}
+\end{figure}
+
+These predictions are now used throughout the strip project to conistently size power supply and cooling systems. Including safety factors in the predictions gives us some confidence that the designs are robust and by using commonly agreed safety factors we ensure a consistent use of safety factors throughout the project and prevent safty factor creep.  
+
+Because of the different timescales for the peak power due to the TID effect and the sensor leakage due to radiation there is room for the optimization of the cooling temperature profile for minimal power. The thermo-electrical model is a powerful tool to plan such an optimized cooling profile. In fact, the cooling `ramp' scenario introduced in section~\ref{sec:opscenarios} is the result of such an optimization (figure~\ref{fig:rampoptimization}).
+
+\begin{figure}[ht]
+\centering
+%\includegraphics[width=0.4\linewidth]{figures/}
+\caption{Optimization of the cooling `ramp' scenario.}
+\label{fig:rampoptimization}
+\end{figure}
+
+(Specifications for modules, global sytem requirements.
 Qualitative understanding of system properties and evolution.)
 
