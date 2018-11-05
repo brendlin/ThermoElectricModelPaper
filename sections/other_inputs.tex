@@ -37,6 +37,7 @@ presented as a function of current load for curves of equal temperature.
 
 
 \subsubsection{Digital current increase of chips using 130~nm CMOS technology}
+\label{sec:tid_explanation}
 
 The ABC and HCC chips, designed using IBM 130 nm CMOS8RF technology, are known to suffer from an
 increase in digital current when subjected to a high-radiation environment
@@ -58,7 +59,7 @@ ABC and HCC currents. The TID bump is assumed to fully apply to the HCC digital 
 \centering
 \includegraphics[width=0.5\linewidth]{figures/AbcTidBumpVersionRatesAndTemps_Nominal.eps}
 \caption{Parameterization of the impact of the total ionizing dose
-on the magnitude of the front-end chip digital current, as a function of time.
+on the magnitude of the front-end chip digital current (the TID bump), presented as a function of time.
 The current is multiplied by a scale factor that is modeled as a function of total ionizing dose,
 dose rate, and temperature, based on experimental data.
 }
@@ -71,7 +72,7 @@ mitigated by operating the chips at higher temperature (note that the dose rate 
 Second, the figure also illustrates how chips receiving different dose rates will reach their maximum
 digital current increase at different times. This feature is particularly important when modeling the
 total power consumed by the barrel and endcap systems. In both systems, the dose rate varies significantly
-depending on the position of the module in the detector. The effect means that the maximum total
+depending on the position of the module in the detector. The effect means that the maximum system
 power will be smaller than the sum of the maximum power of each module, as each chip reaches
 its maximum at a different point in time.
 
