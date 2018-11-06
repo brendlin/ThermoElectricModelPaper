@@ -28,7 +28,7 @@ Cite?
 The data was then fit with a function with sufficient parameters to ensure reasonable agreement; the
 choice of functional form has no physical interpretation. Figure~\ref{fig:feast_eff} depicts the
 FEAST efficiency data and the parameterized fit used in the model. The parameterization fits the data
-with an acccuracy below 1\%; this unceratinty in the FEAST efficiency modeling is small
+with an accuracy below 1\%; this uncertainty in the FEAST efficiency modeling is small
 compared to other uncertainty sources, and is therefore neglected in our model.
 
 \begin{figure}[ht]
@@ -83,6 +83,14 @@ total power consumed by the barrel and endcap systems. In both systems, the dose
 depending on the position of the module in the detector. The effect means that the maximum system
 power will be smaller than the sum of the maximum power of each module, as each chip reaches
 its maximum at a different point in time.
+
+The TID bump is an important source of uncertainty in our model. The experimental data suggests
+a relatively large variation in the TID bump effect, in particular
+between different batches of the same type of chip delivered by the manufacturer, suggesting an unknown
+effect in the fabrication process. To estimate the uncertainty in the TID bump,
+the parameterized function is fit again using only the worst-performing data (defined as having the
+largest TID bump effect). This ``pessimistic'' parameterization is used as a safety factor to estimate
+the detector performance in worst-case scenarios.
 
 \subsubsection{Modeling flux and total ionizing dose in endcap modules}
 
