@@ -14,7 +14,7 @@ The DCDC converter (FEAST) supplies a low-voltage (1.5~V) current to the ABC130 
 chips on the module.
 The efficiency of the FEAST depends on its temperature as well as the output (load) current
 load delivered to the front-end chips. To correctly model the FEAST efficiency, experimental
-measurements are performed to characterize the dependence and fitted with a functional form.
+measurements have been performed to characterize the dependence and fitted with a functional form.
 
 To measure the FEAST efficiency, the FEAST power board was glued to an aluminum cold plate, cooled
 with CO$_2$, and powered with the nominal working input and output voltages (11~V input, 1.5~V output).
@@ -33,8 +33,8 @@ compared to other uncertainty sources, and is therefore neglected in our model.
 
 \begin{figure}[ht]
 \centering
-\subfloat[] {\includegraphics[width=0.49\linewidth]{figures/FeastEfficiency_isoCurrent.eps}}
-\subfloat[] {\includegraphics[width=0.49\linewidth]{figures/FeastEfficiency.eps}}
+\subfloat[] {\includegraphics[width=0.45\linewidth]{figures/FeastEfficiency_isoCurrent.eps}}\quad\quad
+\subfloat[] {\includegraphics[width=0.45\linewidth]{figures/FeastEfficiency.eps}}
 \caption{The FEAST efficiency model based on experimental data. (a) The experimental data points
 characterizing the FEAST efficiency are plotted as dots and color coded for load current. The data is
 compared to the analytic fit, evaluated in curves of equal current. (b) The same analytic fit,
@@ -51,7 +51,18 @@ The ABC and HCC chips, designed using IBM 130 nm CMOS8RF technology, are known t
 increase in digital current when subjected to a high-radiation environment
 \cite{Collaboration:2017mtb}. This phenomenon, known as the ``TID bump,'' is well-studied
 \cite{1589217,FACCIO20081000} and has a characteristic shape whereby the effect reaches a maximum
-over a period of time and then gradually diminishes (see Fig.~\ref{tid_bump}).
+as a function of the accumulated dose and then gradually diminishes (see Fig.~\ref{tid_bump}).
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.5\linewidth]{figures/AbcTidBumpVersionRatesAndTemps_Nominal.eps}
+\caption{Parametrization of the impact of the total ionizing dose
+on the magnitude of the front-end chip digital current (the TID bump), presented as a function of time.
+The current is multiplied by a scale factor that is modeled as a function of total ionizing dose,
+dose rate, and temperature, based on experimental data.
+}
+\label{tid_bump}
+\end{figure}
 
 In an effort to characterize the nature of the TID bump in the ABC and HCC chips empirically,
 many irradiation campaigns have been conducted using a variety of radiation sources, testing
@@ -62,17 +73,6 @@ and the operating temperature of the chip. This parameterization, which is depic
 Fig~\ref{tid_bump}, is used as an input to the thermoelectric model in order to correctly model the
 ABC and HCC currents. The TID bump is assumed to fully apply to the HCC digital current, and apply to
 69\% of the ABC digital current (according to our understanding of its digital circuitry).
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.5\linewidth]{figures/AbcTidBumpVersionRatesAndTemps_Nominal.eps}
-\caption{Parameterization of the impact of the total ionizing dose
-on the magnitude of the front-end chip digital current (the TID bump), presented as a function of time.
-The current is multiplied by a scale factor that is modeled as a function of total ionizing dose,
-dose rate, and temperature, based on experimental data.
-}
-\label{tid_bump}
-\end{figure}
 
 The TID bump displays certain key features, which are reflected in the parameterization:
 first, the effect is larger at colder temperatures and higher dose rates. This means it can be
@@ -92,7 +92,21 @@ the parameterized function is fit again using only the worst-performing data (de
 largest TID bump effect). This ``pessimistic'' parameterization is used as a safety factor to estimate
 the detector performance in worst-case scenarios.
 
-\subsubsection{Modeling flux and total ionizing dose in endcap modules}
+The irradiations of individual chips have typically been performed at constant dose rate and temperature. In our model calculations both of these parameters vary throughout the evaluation. In our parametrization we use only the instantaneous value of these two parameters, thus neglecting any possible history of the TID effect. We also ignore any short-time effects due to variations in the dose rate on the scale of hours or days. This approach is mandated by the lack of more varied experimental data and the absence of a good theoretical model for this effect. This probably constitutes the largest source of unknown errors for our model.
 
-Covered already in the introduction?
+\subsubsection{Radiation-dependent leakage current}
+
+The radiation-induced leakage current can be parametrized as a function of the hadron fluence expressed in 1~MeV equivalent neutrons. The parametrizations we have used for the evaluation of our model are shown in Fig.~\ref{fig:leakage} [ref Marcella Mikestikova]. The currents given there are at a sensor temperature of -15$^\circ$C and are scaled in our model to the specific sensor temperature using eq.~\ref{eq:leakage_current_temp_dependence}. 
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.7\linewidth]{figures/leakage.pdf}
+\caption{Parametrization used for the leakage current at -15$^\circ$C as a function of the fluence for two different sensor bias voltages.}
+\label{fig:leakage}
+\end{figure}
+
+
+
+
+
 
