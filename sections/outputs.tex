@@ -6,7 +6,7 @@ To study the different aspects of our predictions for the operation of the ITk s
 \centering
 \subfloat[] {\label{fig:lhc_profile}  \includegraphics[width=0.49\linewidth]{figures/YearlyRunProfile.eps}}
 \subfloat[] {\label{fig:coolant_ramp} \includegraphics[width=0.49\linewidth]{figures/CoolantTemperature_RampScenario.eps}}
-\caption{(a) Expected LHC performance and (b) `cooling ramp' scenario for the cooling temperatures (right). Year-long shutdowns of the LHC are anticipated in years 5 and 9.}
+\caption{(a) Expected LHC performance and (b) `cooling ramp' scenario for the coolant temperature. Year-long shutdowns of the LHC are anticipated in years 5 and 9.}
 \label{fig:opscenarios}
 \end{figure}
 
@@ -41,9 +41,11 @@ TID parametrization & Nominal/Pessimistic & Different data sets for fit of TID b
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.49\linewidth]{figures/CompareSafetyFactors_SensorTemperature_R3.eps}
-\includegraphics[width=0.49\linewidth]{figures/CompareSafetyFactors_ModulePower_R3.eps}
-\caption{Comparing the impact of different safety factors.}
+\subfloat[] {\label{fig:safety_factors_a} \includegraphics[width=0.49\linewidth]{figures/CompareSafetyFactors_SensorTemperature_R3.eps}}
+\subfloat[] {\label{fig:safety_factors_b} \includegraphics[width=0.49\linewidth]{figures/CompareSafetyFactors_ModulePower_R3.eps}}
+\caption{Comparing the impact of different safety factors on (a) the sensor temperature and
+(b) the module power for the R3 endcap module. The dotted line depicts the effect of all safety
+factors applied at once.}
 \label{fig:safety_factors}
 \end{figure}
 
@@ -56,22 +58,22 @@ Some example output plots for module properties from the thermo-electrical modul
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.4\linewidth]{figures/powerpermodule.pdf}\quad\quad
-\includegraphics[width=0.4\linewidth]{figures/Teosmodule.pdf}
-\caption{Examples for barrel module performance predictions for a flat cooling scenario (-30$^\circ$) including safety factors. Power per module (left). Temperatures for different parts of and end-of-stave barrel module in the innermost barrel (right).}
+\subfloat[] {\label{fig:moduleflatperformance_a} \includegraphics[width=0.4\linewidth]{figures/powerpermodule.pdf}}\quad\quad
+\subfloat[] {\label{fig:moduleflatperformance_b} \includegraphics[width=0.4\linewidth]{figures/Teosmodule.pdf}}
+\caption{Examples of barrel module performance predictions for a flat cooling scenario ($-30^\circ$) including safety factors. (a) Power per module. (b) Temperatures for different parts of an end-of-stave barrel module in the innermost barrel.}
 \label{fig:moduleflatperformance}
 \end{figure}
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.4\linewidth]{figures/Tmodule.pdf}\quad\quad
-\includegraphics[width=0.4\linewidth]{figures/Peosmodule.pdf}
-\caption{Examples for barrel module performance predictions for the ramp cooling scenario including safety factors. Temperature in innermost barrel modules (left). Power in an end-of-stave barrel module in the innermost barrel (right).}
+\subfloat[] {\label{fig:modulerampperformance_a} \includegraphics[width=0.4\linewidth]{figures/Tmodule.pdf}}\quad\quad
+\subfloat[] {\label{fig:modulerampperformance_b} \includegraphics[width=0.4\linewidth]{figures/Peosmodule.pdf}}
+\caption{Examples of barrel module performance predictions for the ramp cooling scenario including safety factors. (a) Sensor temperature in the innermost barrel modules. (b) Power in an end-of-stave barrel module in the innermost layer.}
 \label{fig:modulerampperformance}
 \end{figure}
 
 \subsubsection{System properties}
-One of the key concerns for the design of the strip system is thermal stability of the system. If the cooling temperature is too high to limit the leakage power from the radiation-damaged sensors to a level where it can still be removed the system is unstable (it goes into `thermal runaway'). In this case there is no solution to the set of equations in the thermo-electrical model any more and the numerical search for a solution fails. In the barrel strip system this happens in the last year of operation at a cooling temperature of -15$^\circ$C under nominal conditions, and at -25$^\circ$C (in year 13) with safety factors applied. As the design cooling temperature of the ITk cooling system is -35$^\circ$C we have confidence that the ITk strip system has sufficient margin for thermal stability.  
+One of the key concerns for the design of the strip system is thermal stability of the system. If the cooling temperature is too high to limit the leakage power from the radiation-damaged sensors to a level where it can still be removed the system is unstable (it goes into `thermal runaway'). In this case there is no solution to the set of equations in the thermo-electrical model any more and the numerical search for a solution fails. In the barrel strip system this happens in the last year of operation at a cooling temperature of $-15^\circ$C under nominal conditions, and at $-25^\circ$C (in year 13) with safety factors applied. As the design cooling temperature of the ITk cooling system is $-35^\circ$C we have confidence that the ITk strip system has sufficient margin for thermal stability.  
 
 Beyond the issue of stability, the thermo-electrical model delivers predictions for the development of current and power requirements for the overall system. Some of the predictions are shown in figure~\ref{fig:systemperformance}. The Ignoring this time dependence could lead to overspecification of the cooling system.
 
@@ -84,12 +86,12 @@ Beyond the issue of stability, the thermo-electrical model delivers predictions 
 
 These predictions are now used throughout the strip project to consistently size power supply and cooling systems. Including safety factors in the predictions gives us some confidence that the designs are robust and by using commonly agreed safety factors we ensure a consistent use of safety factors throughout the project and prevent safety factor creep.  
 
-Because of the different timescales for the peak power due to the TID effect and the sensor leakage due to radiation there is room for the optimization of the cooling temperature profile for minimal power. The thermo-electrical model is a powerful tool to plan such an optimized cooling profile. In fact, the cooling `ramp' scenario introduced in section~\ref{sec:opscenarios} is the result of such an optimization (figure~\ref{fig:rampoptimization}).
+Because of the different timescales for the peak power due to the TID effect and the sensor leakage due to radiation there is room for the optimization of the cooling temperature profile for minimal power. The thermo-electrical model is a powerful tool to plan such an optimized cooling profile. In fact, the cooling `ramp' scenario introduced in Section~\ref{sec:opscenarios} is the result of such an optimization (Fig.~\ref{fig:rampoptimization}).
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.49\linewidth]{figures/SensorCurrent_R3_newramp.eps}
-\includegraphics[width=0.49\linewidth]{figures/FeastCurrent_R1_newramp.eps}
-\caption{Optimization of the cooling `ramp' scenario. The dashed lines represents the ramp scenario, which has been selected so that the sensor leakage current is stable throughout the lifetime of the ITk (left). The higher cooling temperatures in the first years keep the TID effect relatively small (right).}
+\subfloat[] {\label{fig:rampoptimization_a} \includegraphics[width=0.49\linewidth]{figures/SensorCurrent_R3_newramp.eps}}
+\subfloat[] {\label{fig:rampoptimization_b} \includegraphics[width=0.49\linewidth]{figures/FeastCurrent_R1_newramp.eps}}
+\caption{Performance of the cooling `ramp' scenario specified in Fig.~\ref{fig:coolant_ramp}. The dashed lines represents the ramp scenario, which has been selected so that the sensor leakage current (a) is stable throughout the lifetime of the ITk. A higher coolant temperature in the first few years reduces the TID effect, which reduces the current load on the FEAST (b) below its specified maximum of 4A.}
 \label{fig:rampoptimization}
 \end{figure}
