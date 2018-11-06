@@ -7,10 +7,10 @@ initial temperatures.
 The initial value for the module power is used to solve for the sensor power and temperature accounting
 for leakage current, using the thermal balance equation and the relationship from
 Eq.~\ref{eq:leakage_current_temp_dependence}.
-Using the calculated sensor leakage current and temperature, the power and temperature of the module
+Using this calculated sensor leakage current and temperature, the power and temperature of the module
 components are updated given the inital (year-0, month-0) startup parameters.
 
-Next, the module conditions of the following month (year-0, month 1) are calculated. Using the component
+Next, the module conditions of the following month (year 0, month 1) are calculated. Using the component
 temperatures calculated from the previous month and the operational parameters (ionizing dose and dose
 rates) from month 1, the module total power (excluding sensor leakage) is again recalculated, and
 subsequently the sensor temperature and leakage current are recomputed. Following this,
@@ -19,16 +19,17 @@ steps until the final year of operation, or until a real solution for the sensor
 exist, indicating that thermal runaway conditions have been reached.
 
 In the barrel subsystem, the above procedure is performed four separate times to
-represent the conditions of the four barrel layers located at different radii from the beam axis
+represent the radiation conditions of the four barrel layers located at different radii from the beam axis
 \footnote{
 The correct module type, short-strip in the inner two layers and long-strip for the outer two
 layers, is used for each layer.
 }.
 %
-The procedure is also performed once for a module adjacent to an EOS and a representative module
-of the remaining 13 without an adjacent EOS. In each case, the worst-case total ionizing dose and dose
+The procedure is performed for a module with and without an adjacent EOS card (hereafter referred to
+as ``EOS'' and ``nominal'' module types).
+In each case, the worst-case total ionizing dose and dose
 rate is assumed for each layer, though these values are relatively consistent for a given layer.
-In total, 8 modules are simulated, and they are combined in their proper proportion to simulate the
+In total, 8 modules are simulated (4 layers $\times$ nominal/EOS), and they are combined in their proper proportion to simulate the
 entire barrel system.
 
 In the endcap subsystem, the total ionizing dose and dose rates vary signficantly depending on the
