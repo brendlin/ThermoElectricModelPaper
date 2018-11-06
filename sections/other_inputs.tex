@@ -1,6 +1,12 @@
 
-Explain the specific challenges in the strip detector that are parameterized and modeled
-in our case.
+The two temperature-dependent elements of the thermoelectric model---the
+radiation-induced digital current increase in the front-end chips, and the
+efficiency of the FEAST DCDC converter---are described in this section.
+Both effects are studied experimentally and fit with functional forms
+in order to accurately represent them in the model.
+The uncertainty in the experimental data, and in our modeling assumptions,
+are estimated here and considered in the evaluation of safety factors,
+described in detail in Section~\ref{sec:safety_factors}.
 
 \subsubsection{DCDC converter}
 
@@ -11,17 +17,19 @@ load delivered to the front-end chips. To correctly model the FEAST efficiency, 
 measurements are performed to characterize the dependence and fitted with a functional form.
 
 To measure the FEAST efficiency, the FEAST power board was glued to an aluminum cold plate, cooled
-with CO$_2$, an powered with the nominal working input and output voltages (11~V input, 1.5~V output).
-The temperature of the FEAST is measured with an NTC thermistor and PTAT sensor residing on the FEAST,
+with CO$_2$, and powered with the nominal working input and output voltages (11~V input, 1.5~V output).
+The temperature of the FEAST was measured with an NTC thermistor and PTAT sensor residing on the FEAST,
 for a range of load currents up to the maximum design current of 4A\footnote
 {
 FEAST data spreadsheet: \url{http://project-dcdc.web.cern.ch/project-dcdc/public/Documents/FEASTMod_Datasheet.pdf}.
 Cite?
 }.
 
-The data is then fit with a function with sufficient parameters to ensure reasonable agreement; the
+The data was then fit with a function with sufficient parameters to ensure reasonable agreement; the
 choice of functional form has no physical interpretation. Figure~\ref{fig:feast_eff} depicts the
-FEAST efficiency data and the parameterized fit used in the model.
+FEAST efficiency data and the parameterized fit used in the model. The parameterization fits the data
+with an acccuracy below 1\%; this unceratinty in the FEAST efficiency modeling is small
+compared to other uncertainty sources, and is therefore neglected in our model.
 
 \begin{figure}[ht]
 \centering
