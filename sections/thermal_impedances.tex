@@ -2,7 +2,7 @@
 
 The cooling path between the sources dissipating electrical power and the cooling fluid is three-dimensional and includes components with orthotropic thermal conductivity. Hence the prediction of temperature at any node of the model requires a 3d thermal FEA Ref [Abaqus, Ansys]. However, the thermal conductivities of the components along the path are approximately constant, so that the temperature rise (above Tc) at any node of the structure is adequately described by a linear sum of contributions from individual sources, i.e:
 \begin{equation}
-T_i  =   T_\text{c}  +  \sum_{i,j} a_{ij} Q_{j},
+T_i  =   T_\text{c}  +  \sum_{j} a_{ij} Q_{j},
 \end{equation}
 
 where $Q_j$ is the heat generated at node $j$. In order to extract the matrix of coefficients $a_{ij}$ , the finite element model is run with each heat source (or group of similar sources) switched on in turn with a representative amount of heat, and the temperature rise noted for each of the nodes of interest, which are those in the thermal network model (Figure~\ref{fig:thermalmodel}).  

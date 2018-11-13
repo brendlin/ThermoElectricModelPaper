@@ -1,3 +1,4 @@
+\textit{From Graham: I think there is too much detail here (although it is doubtless accurate). Could the text be simplified, given that information is availablein figure 4?}
 
 The electrical model consists of low-voltage (LV) and high-voltage (HV) circuits, depicted in
 Fig.~\ref{electrical_model}. The LV current is used to power the hybrid controller chips (HCCs),
@@ -26,13 +27,11 @@ LDO.
 
 The bus tape, which carries both LV and HV currents, has a small wire resistance, which impacts the
 module in two ways. First,
-the tape itself will radiate some heat according to the amount of current passing through it; this
+the tape itself will generate some heat according to the amount of current passing through it; this
 source of heat is accounted for in the model, however the contribution to the total module power
 is negligible.
-Second,
-the voltage supplied to the module will be affected by the small $\Delta V$ in the bus tape. This
-effect is largest for modules on the non-EOS end of the barrel stave or endcap petal, where the current
-has traveled a longer distance. The treatment of this effect is slightly different in the barrel and
+Second, the voltage supplied to the module reduces slightly with distance from the EOS end of the barrel stave or endcap petal.  
+The treatment of this effect is slightly different in the barrel and
 endcap models: in the barrel, the voltage delivered to every module is set at 10.5~V; in the endcap,
 the $\Delta V$ is estimated based on the calculated expected power loss along the tape for each module.
 In both cases, the impact of using a different treatment is small.
@@ -44,8 +43,10 @@ to 2.5~V; an additional LDO regulator brings the 2.5~V down to 1.2~V for some co
 The EOS cards on the endcap petals and the long-strip staves have one GBLD and one LpGBT;
 EOS cards on the short-strip staves contain two of each. All EOS cards contain one GBTIA.
 
+\textit{Comment from Graham: I think that if we are going to refer to GBLD, LpGBT etc. then there should be a short sentence that describes (in a word) what each of these chips does?}
+
 Finally, the HV current provides the voltage bias on the silicon sensors. An HV multiplexer
 switch (HVMUX) is placed in parallel to the sensor, which can be used to disconnect the sensor from the
-bias line. Two HV filters with an effective resistance of 10~k$\Omega$ are placed in series with the
+bias line requiring a parallel resistor in order to function. Two HV filters with an effective resistance of 10~k$\Omega$ are placed in series with the
 sensor. The nominal operating voltage of the sensor is expected to be 500V, but the system is designed
 to operate with a voltage bias of up to 700V.
