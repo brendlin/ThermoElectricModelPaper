@@ -43,7 +43,7 @@ Fig.~\ref{fig:endcapgeometry} depicts the geometry of the endcap petal.
 \subsection{Radiation environment}
 A key input to the calculation is the radiation environment of the strip system, as several inputs depend on radiation damage effects. The sensor leakage current can be parametrized as  a function of the fluence expressed in 1~MeV neutron-equivalents, and the TID effect on the digital chip current will be described as a function of the total ionizing dose rate (more details on its dependencies can be found in Section~\ref{fig:feast_eff}). 
 
-Predictions for both of these parameters for each point in the ITK are available which have been generated using the FLUKA particle transport code and the PYTHIA8 event generator (Fig.~\ref{fig:radiation}) [ref]. Both of these distributions display a weak dependence on $z$ in the barrel, whereas they vary significantly along $r$ and $z$ over the length of the endcap petals. Because of this, and the linear uniformity of the stave compared to the more complex geometry along a petal, we modelled only two types of modules for the barrel (a generic module along the linear part of the stave and the module next to the end-of-structure card), but six different types of modules in a petal.
+Predictions for both of these parameters for each point in the ITK are available which have been generated using the FLUKA particle transport code and the PYTHIA8 event generator (Fig.~\ref{fig:radiation}) \cite{background}. Both of these distributions display a weak dependence on $z$ in the barrel, whereas they vary significantly along $r$ and $z$ over the length of the endcap petals. Because of this, and the linear uniformity of the stave compared to the more complex geometry along a petal, we modelled only two types of modules for the barrel (a generic module along the linear part of the stave and the module next to the end-of-structure card), but six different types of modules in a petal.
 % Note here: the fluence is a justification for modeling layer 0-3 separately, and using
 % the flux/TID to model 6 separate versions of a petal.
 % The module design justifies 2 (6) different module types in the barrel (endcap).
@@ -52,6 +52,6 @@ Predictions for both of these parameters for each point in the ITK are available
 \centering
 \includegraphics[width=0.48\linewidth]{figures/fluence.pdf}\quad
 \includegraphics[width=0.48\linewidth]{figures/TID.pdf}
-\caption{ATLAS ITk radiation environment. 1~MeV neutron equivalent fluence (left) and total ionizing dose (right). Both plots are for an integrated luminosity of 4000~fb$^{-1}$ \cite{Collaboration:2017mtb}.}
+\caption{ATLAS ITk radiation environment. 1~MeV neutron equivalent fluence (left) and total ionizing dose (right). Both plots are for an integrated luminosity of 4000~fb$^{-1}$ \cite{background}.}
 \label{fig:radiation}
 \end{figure}
