@@ -1,9 +1,8 @@
 \label{sec:running}
 The thermoelectric model constructs a profile of the sensor module operation conditions over the
-lifetime of the detector in the following manner. First, assuming a reasonable set of initial
-component temperatures, the module total power (including all components, but excluding the sensor
-leakage power) and the sensor temperature without leakage current ($T_0$) is calculated assuming these
-initial temperatures.
+lifetime of the detector in the following manner. First, the total module power (including all components, but excluding the sensor
+leakage power) and the sensor temperature assuming no leakage current ($T_0$) are calculated 
+using a reasonable set of initial component temperatures.
 The initial value for the module power is used to solve for the sensor power and temperature accounting
 for leakage current, using the thermal balance equation and the relationship from
 Eq.~\ref{eq:leakage_current_temp_dependence}.
@@ -12,19 +11,19 @@ components are updated given the inital (year 0, month 0) startup parameters.
 
 Next, the module conditions of the following month (year 0, month 1) are calculated. Using the component
 temperatures calculated from the previous month and the operational parameters (ionizing dose and dose
-rates) from month 1, the module total power (excluding sensor leakage) is again calculated, and
+rates) from the current month, the module total power (excluding sensor leakage) is again calculated, and
 subsequently the sensor temperature and leakage current are computed. Following this,
 the module component temperatures and power values are derived for this month. This process is repeated in one-month
 steps until the final year of operation, or until a real solution for the sensor temperature does not
 exist, indicating that thermal runaway conditions have been reached.
 
 In the barrel subsystem, the above procedure is performed four separate times to
-represent the radiation conditions of the four barrel layers located at different radii from the beam axis\footnote{The correct module type, short-strip in the inner two layers and long-strip for the outer two layers, is used for each layer.} for both, a module next to the EOS card (hereafter refered to as `EOS module') and a module along the lenth of the stave away from the EOS card (`normal module'). Thus in total, 8 modules are simulated for the barrel (4 layers $\times$ normal/EOS), and they are combined in their proper proportion to simulate the entire barrel system.
+represent the radiation conditions of the four barrel layers located at different radii from the beam axis\footnote{The correct module type, short-strip in the inner two layers and long-strip for the outer two layers, is used for each layer.} for both a module next to the EOS card (hereafter refered to as `EOS module') and a module along the lenth of the stave away from the EOS card (`normal module'). Thus, 8 modules are simulated in total for the barrel (4 layers $\times$ normal/EOS), and they are combined in their proper proportion to simulate the entire barrel system.
 
 In the endcap subsystem, the total ionizing dose and dose rates vary signficantly depending on the
 position of the module; furthermore, the design of each module on a petal differs significantly.
 Therefore, all 36 module types (6 rings $\times$ 6 disks) are simulated independently, and combined to
 represent the full endcap.
 
-We have implemented this algorithm in Mathematica (barrel) and Python (endcaps). In both cases the calculation for a set of operating conditions over the full lifetime of the LHC takes between 5 and 10 minutes on a standard PC, thus enabling a quick turn-around for systematic studies of the parameter space.
+We have implemented this algorithm in Mathematica (barrel) and Python (endcaps). In both cases, the calculation for a set of operating conditions over the full lifetime of the LHC takes between 5 and 10 minutes on a standard PC, thus enabling a quick turn-around for systematic studies of the parameter space.
 
