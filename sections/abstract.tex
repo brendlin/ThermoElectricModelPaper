@@ -1,2 +1,29 @@
 
-Here is the abstract.
+%% The thermal properties of a silicon detector are typically modeled using numerical methods, such as
+%% finite element analysis (FEA) simulation, to determine thermal performance and estimate the risk of
+%% thermal runaway. Such methods are essential for understanding detector performance, however they have
+%% some limitations: a FEA simulation can only provide results for a discrete set of operating conditions,
+%% and the process is computationally expensive.
+%
+%% A simple analytic model has been developed to complement the FEA approach. This model predicts the
+%% behavior of a silicon detector by calculating the cumulative effects of the thermal and electrical
+%% characteristics of the on-module detector components. A module's thermal behavior is represented by
+%% a simple network of one-dimensional thermal pathways whose properties are taken from FEA simulation.
+%% The thermal and electrical properties of front-end electronics are encoded in the model using
+%% parameterizations of direct measurements. Using this model, the performance of a detector can be
+%% evaluated over a range of operational conditions. The full lifetime of the detector can be simulated
+%% by adding the effects of radiation damage and other time-dependent processes.
+%
+%% We present a working example of the analytic model as applied to the ATLAS ITk strip detector in
+%% preparation for the Phase-II Upgrade. The model is used to test design choices, validate
+%% specifications, and predict the total power of the strip barrel and endcap subsystems. The model
+%% reveals insights into the interplay of detector elements and operational conditions in the silicon
+%% module, and it is a valuable tool for estimating the headroom remaining before reaching thermal
+%% runaway.
+
+The silicon strip detector for the ATLAS Phase-II upgrade is used to demonstrate the application
+of the thermoelectric model and its performance. With this example, the thermoelectric model is used
+to test design choices, validate specifications, and predict key operational parameters such as
+cooling system requirements. The model can reveal insights into the interplay of conditions and
+components in the silicon module, and it is a valuable tool for estimating the headroom remaining
+before reaching thermal runaway.
