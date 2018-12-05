@@ -1,6 +1,6 @@
 \textit{(This section should be discussed and agreed between Graham and Yu-Heng)}
 
-The cooling path between the sources dissipating electrical power and the cooling fluid is three-dimensional and includes components with orthotropic thermal conductivity. Hence the prediction of temperature at any node of the model requires a 3D thermal FEA Ref [Abaqus, Ansys]. However, the thermal conductivities of the components along the path are approximately constant, so that the temperature rise above the coolant temperature of any node $i$ ($i=$~ABC, HCC, AMAC, FEAST, tape, RHV, or sensor) of the structure, \mbox{$\Delta T_i \equiv T_i - T_c$,} in the thermal network model is adequately described by a linear sum of contributions from individual sources, i.e:
+The cooling path between the sources dissipating electrical power and the cooling fluid is 3-dimensional and includes components with orthotropic thermal conductivity. Hence the prediction of temperature at any node of the model requires a 3D thermal FEA \cite{abaqus,ansys}. However, the thermal conductivities of the components along the path are approximately constant, so that the temperature rise above the coolant temperature of any node $i$ ($i=$~ABC, HCC, AMAC, FEAST, tape, RHV, or sensor) of the structure, \mbox{$\Delta T_i \equiv T_i - T_c$,} in the thermal network model is adequately described by a linear sum of contributions from individual sources, i.e:
 
 \begin{equation}
 \Delta T_i = R_i P_i + \left(R_\text{C} + R_\text{M}\right)\sum_j P_j, 

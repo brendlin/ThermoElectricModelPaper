@@ -1,16 +1,16 @@
 
 The two temperature-dependent elements of the thermoelectric model---the
 radiation-induced digital current increase in the front-end chips, and the
-efficiency of the FEAST DCDC converter---are described in this section.
+efficiency of the FEAST DC-DC converter---are described in this section.
 Both effects are studied experimentally and fit with functional forms
 in order to accurately represent them in the model.
 The uncertainty in the experimental data, and in our modeling assumptions,
 are estimated here and considered in the evaluation of safety factors,
 described in detail in Section~\ref{sec:safety_factors}.
 
-\subsubsection{DCDC converter}
+\subsubsection{DC-DC converter}
 
-The DCDC converter (FEAST) supplies a low-voltage (1.5~V) current to the ABC130 and HCC front-end
+The DC-DC converter (FEAST) supplies a low-voltage (1.5~V) current to the ABC130 and HCC front-end
 chips on the module.
 The efficiency of the FEAST depends on its temperature as well as the output (load) current
 load delivered to the front-end chips. To correctly model the FEAST efficiency, experimental
@@ -96,17 +96,11 @@ The irradiations of individual chips have typically been performed at constant d
 
 \subsubsection{Radiation-dependent leakage current}
 
-The radiation-induced leakage current can be parametrized as a function of the hadron fluence expressed in 1~MeV equivalent neutrons. The parametrizations we have used for the evaluation of our model are shown in Fig.~\ref{fig:leakage} \cite{mikestikova}. The currents given there are at a sensor temperature of $-15^\circ$C and are scaled in our model to the specific sensor temperature using Eq.~\ref{eq:leakage_current_temp_dependence}. 
+The radiation-induced leakage current can be parametrized as a function of the hadron fluence expressed in 1~MeV equivalent neutrons. The parametrizations we have used for the evaluation of our model are shown in Fig.~\ref{fig:leakage} for a reference sensor temperature of $-15^\circ$C. In our model, the leakage current is scaled to the specific sensor temperature using Eq.~\ref{eq:leakage_current_temp_dependence}.
 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.45\linewidth]{figures/SensorLeakagePower.eps}
-\caption{Parametrization used for the leakage current at $-15^\circ$C as a function of the fluence for two different sensor bias voltages.}
+\caption{Parametrization used for the leakage current at $-15^\circ$C as a function of the fluence for two different sensor bias voltages \cite{mikestikova}.}
 \label{fig:leakage}
 \end{figure}
-
-
-
-
-
-
