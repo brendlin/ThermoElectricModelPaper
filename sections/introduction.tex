@@ -41,7 +41,7 @@ The remaining module and petal core design details are largely identical to the 
 \label{fig:endcapgeometry}
 \end{figure}
 
-\subsection{The radiation environment}
+\subsection{Radiation environment}
 A key input to the calculation is the radiation environment of the strip system, as several inputs depend on radiation damage effects. The sensor leakage current can be parametrized as  a function of the fluence expressed in 1~MeV neutron-equivalents, and the TID effect on the digital chip current will be described as a function of the total ionizing dose rate (more details on its dependencies can be found in Section~\ref{fig:feast_eff}). 
 
 Predictions for both of these parameters for each point in the ITK are available which have been generated using the FLUKA particle transport code and the PYTHIA8 event generator (Fig.~\ref{fig:radiation}) \cite{background}. Both of these distributions display a weak dependence on $z$ in the barrel, whereas they vary significantly along $r$ and $z$ over the length of the endcap petals. Because of this, and the linear uniformity of the stave compared to the more complex geometry along a petal, we modelled only two types of modules for the barrel (a generic module along the linear part of the stave and the module next to the end-of-structure card), but six different types of modules in a petal.
