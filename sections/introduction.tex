@@ -15,7 +15,9 @@ In principle, the temperatures in the system for a given set of operational para
 \subsection{The ATLAS strip system}
 The strip system for the ATLAS Phase-II upgrade \cite{Collaboration:2017mtb} consists of two parts: the barrel system, comprised of four concentric cylindrical barrels, and two endcaps consisting of six disks each.
 
-In the barrel, the detector modules are made of square sensors ($96.85\times 96.72$~mm$^2$) with a hybrid on top, which hosts the front-end chips (ABC130 \cite{abc130} and HCC \cite{Collaboration:2017mtb}) as well as circuitry to convert the supply voltage of larger than 10~V to the chip voltage of 1.5~V. This circuitry is controlled by the FEAST chip. The modules are glued onto both sides of a composite sandwich that contains two parallel thin-wall titanium cooling pipes embedded in carbon foam (Allcomp K9 - ref)  between two facesheets of UHM carbon fibre (3 layers of K13C2U/EX1515) with a co-cured Kapton/copper low-mass tape. A model of this geometry is shown in Fig.~\ref{fig:barrelgeometry}. During final operation, cooling will be achieved by evaporating CO$_2$ in the cooling pipes with a final target temperature no higher than $-35^\circ$C anywhere along the stave. The geometry of the stave is uniform along its length, with the exception of the end region of the stave, where an End-Of-Structure (EOS) card is mounted on both surfaces. The EOS card shares part of its heat path with the module; underneath the EOS, the thermal path is degraded by the presence of electrically-insulating ceramic pipe sections.
+In the barrel, the detector modules are made of square sensors ($96.85\times 96.72$~mm$^2$) with a hybrid on top, which hosts the front-end chips (ABC130 \cite{abc130} and HCC \cite{Collaboration:2017mtb}) as well as circuitry to convert the supply voltage of larger than 10~V to the chip voltage of 1.5~V. This circuitry is controlled by the FEAST chip. The modules are glued onto both sides of a composite sandwich that contains two parallel thin-wall titanium cooling pipes embedded in carbon foam (Allcomp K9 - ref)  between two facesheets of UHM carbon fibre (3 layers of K13C2U/EX1515) with a co-cured Kapton/copper low-mass tape. A model of this geometry is shown in Fig.~\ref{fig:barrelgeometry}. During final operation, cooling will be achieved by evaporating CO$_2$ in the cooling pipes with a final target temperature no higher than $-35^\circ$C anywhere along the stave.
+
+The geometry of the stave is uniform along its length, with the exception of the end region of the stave, where an End-Of-Structure (EOS) card is mounted on both surfaces. The EOS card shares part of its heat path with the module; underneath the EOS, the thermal path is degraded by the presence of electrically-insulating ceramic pipe sections. The thermal and electrical properties of a module adjacent to the EOS card (hereafter refered to as an `EOS module') are sufficiently different from other modules along the lenth of the stave (`normal modules') to warrant separate treatment in the thermo-electric model of the barrel.
 
 \begin{figure}[ht]
 \centering
@@ -24,14 +26,15 @@ In the barrel, the detector modules are made of square sensors ($96.85\times 96.
 \label{fig:barrelgeometry}
 \end{figure}
 
-Each disk of the endcap detector contains 32 `petals,' the local substructure depicted in Fig.~\ref{fig:endcapgeometry}.
-Each petal is loaded on both sides with six silicon modules (twelve in total).
-The endcap detector modules consist of six distinct designs located at increasing radius from the
-beam pipe and labeled R0 through R5 (where `R' stands for ring). Each endcap module consists of one
+The endcap system consists of two endcaps composed of 6 disks each.
+Each disk contains 32 `petals,' the local substructure depicted in Fig.~\ref{fig:endcapgeometry}.
+Both sides of the petal are loaded with 6 silicon modules, each with a distinct design,
+located at increasing radius from the beam pipe and labeled R0 through R5 (where `R' stands for ring).
+Each endcap module consists of one
 or two irregularly-shaped silicon sensors, and a varying number of front-end chips and DC-DC converters on each module.
 % (between 12 and 28 ABCs, and 2 to 4 HCCs).
 The EOS card is located adjacent to the R5 module, but the
-cooling pipes (without electrical breaks) run directly underneath it without a shared heat path, in contrast to the barrel EOS.
+cooling pipes run directly underneath it without a shared heat path, in contrast to the barrel EOS.
 The remaining module and petal core design details are largely identical to the barrel module description above.
 
 \begin{figure}[ht]

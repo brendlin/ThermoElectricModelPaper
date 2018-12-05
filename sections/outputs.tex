@@ -14,7 +14,7 @@ To study the different aspects of our predictions for the operation of the ITk s
 
 \subsection{Safety factors}
 \label{sec:safety_factors}
-To ensure the robustness of the system design against errors in the assumptions used in the model, we also evaluate the model using a set of input parameters with some key inputs degraded. The set of safety factors used is given in Table~\ref{tab:safetyfactors}. Each safety factor has been estimated individually based on experience, the complexity of the system aspect described by the parameter, and from available data or the absence of such data. Note that the model can be evaluated with all the safety factors listed in Table~\ref{tab:safetyfactors} used together, a situation which is unlikely to occur in the real system, to provide a worst-case estimate for the performance of the ITk strip system. The individual effects of the different safety factors are demonstrated in figure~\ref{fig:safety_factors}.
+To ensure the robustness of the system design against errors in the assumptions used in the model, we also evaluate the model using a set of input parameters with some key inputs degraded. The set of safety factors used is given in Table~\ref{tab:safetyfactors}. Each safety factor has been estimated individually based on experience, the complexity of the system aspect described by the parameter, and from available data or the absence of such data. Note that the model can be evaluated with all the safety factors listed in Table~\ref{tab:safetyfactors} used together, a situation that is unlikely to occur in the real system, to provide a worst-case estimate for the performance of the ITk strip system. The individual effects of the different safety factors are demonstrated in Fig.~\ref{fig:safety_factors}.
 
 \let\arraystretcha\arraystretch %% improve the table spacing
 \renewcommand\arraystretch{1.2} %% improve the table spacing
@@ -53,7 +53,7 @@ factors applied at once.}
 
 \subsubsection{Module properties}
 
-Example output plots of module properties from the thermo-electrical model are shown in Figures~\ref{fig:moduleflatperformance} and~\ref{fig:modulerampperformance}. The different radiation-dependent effects occur on different timescales. The maximum in the digital chip power due to the TID effect occurs relatively early (in year 1 to 4), although the bump has a long tail, particularly in the outer layers of the barrel. The sensor leakage power, on the other hand, grows towards the end of the lifetime of the ITk. If the leakage current continued to increase in the case of further irradiation, or if the cooling termperature were raised, this growth would ultimately lead to thermal runaway. Due to the radial dependence of the radiation environment, the radiation-induced effects are most pronounced in the innermost layers.
+Several module properties predicted by the thermo-electrical model are shown in Figures~\ref{fig:moduleflatperformance} and~\ref{fig:modulerampperformance}. The different radiation-dependent effects occur on different timescales. The maximum in the digital chip power due to the TID effect occurs relatively early (in year 1 to 4), although the bump has a long tail, particularly in the outer layers of the barrel. The sensor leakage power, on the other hand, grows towards the end of the lifetime of the ITk. If the leakage current continued to increase in the case of further irradiation, or if the cooling termperature were raised, this growth would ultimately lead to thermal runaway. Due to the radial dependence of the radiation environment, the radiation-induced effects are most pronounced in the innermost layers.
 
 \begin{figure}[ht]
 \centering
@@ -77,7 +77,7 @@ One of the key concerns for the design of the strip system is thermal stability 
 % In the barrel strip system, this occurs in the final year of operation at a cooling temperature of $-15^\circ$C under nominal conditions, and at $-25^\circ$C (in year 13) with safety factors applied.
 In the endcap strip system, this occurs at a cooling temperature of $-15^\circ$C under nominal conditions; in this scenario, thermal runaway would be reached in the 12$^\text{th}$ year of operation. With safety factors applied, thermal runaway is reached at a cooling temperature of $-25^\circ$C (in year 11).
 In the barrel system, where the radiation environment is slightly less intense, the conditions for thermal runaway occur two years later compared to the endcaps.
-As the design cooling temperature of the ITk cooling system is $-35^\circ$C, we have confidence that the ITk strip system has sufficient margin for thermal stability.
+As the design cooling temperature of the ITk cooling system is $-35^\circ$C, we have confidence that the ITk strip system has a sufficient margin for thermal stability.
 
 Beyond the issue of stability, the thermo-electrical model delivers predictions for the development of current and power requirements for the overall system. Some of the predictions are shown in figure~\ref{fig:systemperformance}. Again, the different timescales of the various radiation-induced effects are visible; ignoring this time dependence could lead to overspecification of some system aspects like the total cooling power.
 

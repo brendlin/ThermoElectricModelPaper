@@ -92,11 +92,13 @@ the parameterized function is fit again using only the worst-performing data (de
 largest TID bump effect). This ``pessimistic'' parameterization is used as a safety factor to estimate
 the detector performance in worst-case scenarios.
 
-The irradiations of individual chips have typically been performed at constant dose rate and temperature. In our model calculations both of these parameters vary throughout the evaluation. In our parametrization we use only the instantaneous value of these two parameters, thus neglecting any possible history of the TID effect. We also ignore any short-time effects due to variations in the dose rate on the scale of hours or days. This approach is mandated by the lack of more varied experimental data and the absence of a good theoretical model for this effect. This probably constitutes the largest source of unknown errors for our model.
+The irradiations of individual chips have typically been performed at constant dose rate and temperature.
+However, both of these parameters will vary as a function of time in the scenarios that we attempt to model.
+In our current parametrization, we use only the instantaneous value of these two parameters, thus neglecting any possible history of the TID effect. We also ignore any short-term effects due to variations in the dose rate on the scale of hours or days. This approach is mandated by the lack of more varied experimental data and the absence of a good theoretical model for this effect. This probably constitutes the largest source of unknown error for our model.
 
 \subsubsection{Radiation-dependent leakage current}
 
-The radiation-induced leakage current can be parametrized as a function of the hadron fluence expressed in 1~MeV equivalent neutrons. The parametrizations we have used for the evaluation of our model are shown in Fig.~\ref{fig:leakage} for a reference sensor temperature of $-15^\circ$C. In our model, the leakage current is scaled to the specific sensor temperature using Eq.~\ref{eq:leakage_current_temp_dependence}.
+The radiation-induced leakage current can be parametrized as a function of the hadron fluence expressed in 1~MeV equivalent neutrons. The parametrizations we have used for the evaluation of our model are shown in Fig.~\ref{fig:leakage} for a reference sensor temperature of $-15^\circ$C. In our model, the leakage current is scaled to a given sensor temperature using Eq.~\ref{eq:leakage_current_temp_dependence}.
 
 \begin{figure}[ht]
 \centering
