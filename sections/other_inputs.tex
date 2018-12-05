@@ -1,16 +1,16 @@
 
 The two temperature-dependent elements of the thermoelectric model---the
 radiation-induced digital current increase in the front-end chips, and the
-efficiency of the FEAST DCDC converter---are described in this section.
+efficiency of the FEAST DC-DC converter---are described in this section.
 Both effects are studied experimentally and fit with functional forms
 in order to accurately represent them in the model.
 The uncertainty in the experimental data, and in our modeling assumptions,
 are estimated here and considered in the evaluation of safety factors,
 described in detail in Section~\ref{sec:safety_factors}.
 
-\subsubsection{DCDC converter}
+\subsubsection{DC-DC converter}
 
-The DCDC converter (FEAST) supplies a low-voltage (1.5~V) current to the ABC130 and HCC front-end
+The DC-DC converter (FEAST) supplies a low-voltage (1.5~V) current to the ABC130 and HCC front-end
 chips on the module.
 The efficiency of the FEAST depends on its temperature as well as the output (load) current
 load delivered to the front-end chips. To correctly model the FEAST efficiency, experimental
@@ -55,7 +55,7 @@ as a function of the accumulated dose and then gradually diminishes (see Fig.~\r
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.5\linewidth]{figures/AbcTidBumpVersionRatesAndTemps_Nominal.eps}
+\includegraphics[width=0.45\linewidth]{figures/AbcTidBumpVersionRatesAndTemps_Nominal.eps}
 \caption{Parametrization of the impact of the total ionizing dose
 on the magnitude of the front-end chip digital current (the TID bump), presented as a function of time.
 The current is multiplied by a scale factor that is modeled as a function of total ionizing dose,
@@ -92,21 +92,17 @@ the parameterized function is fit again using only the worst-performing data (de
 largest TID bump effect). This ``pessimistic'' parameterization is used as a safety factor to estimate
 the detector performance in worst-case scenarios.
 
-The irradiations of individual chips have typically been performed at constant dose rate and temperature. In our model calculations both of these parameters vary throughout the evaluation. In our parametrization we use only the instantaneous value of these two parameters, thus neglecting any possible history of the TID effect. We also ignore any short-time effects due to variations in the dose rate on the scale of hours or days. This approach is mandated by the lack of more varied experimental data and the absence of a good theoretical model for this effect. This probably constitutes the largest source of unknown errors for our model.
+The irradiations of individual chips have typically been performed at constant dose rate and temperature.
+However, both of these parameters will vary as a function of time in the scenarios that we attempt to model.
+In our current parametrization, we use only the instantaneous value of these two parameters, thus neglecting any possible history of the TID effect. We also ignore any short-term effects due to variations in the dose rate on the scale of hours or days. This approach is mandated by the lack of more varied experimental data and the absence of a good theoretical model for this effect. This probably constitutes the largest source of unknown error for our model.
 
 \subsubsection{Radiation-dependent leakage current}
 
-The radiation-induced leakage current can be parametrized as a function of the hadron fluence expressed in 1~MeV equivalent neutrons. The parametrizations we have used for the evaluation of our model are shown in Fig.~\ref{fig:leakage} \cite{mikestikova}. The currents given there are at a sensor temperature of $-15^\circ$C and are scaled in our model to the specific sensor temperature using Eq.~\ref{eq:leakage_current_temp_dependence}. 
+The radiation-induced leakage current can be parametrized as a function of the hadron fluence expressed in 1~MeV equivalent neutrons. The parametrizations we have used for the evaluation of our model are shown in Fig.~\ref{fig:leakage} for a reference sensor temperature of $-15^\circ$C. In our model, the leakage current is scaled to a given sensor temperature using Eq.~\ref{eq:leakage_current_temp_dependence}.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.5\linewidth]{figures/SensorLeakagePower.eps}
-\caption{Parametrization used for the leakage current at -15$^\circ$C as a function of the fluence for two different sensor bias voltages.}
+\includegraphics[width=0.45\linewidth]{figures/SensorLeakagePower.eps}
+\caption{Parametrization used for the leakage current at $-15^\circ$C as a function of the fluence for two different sensor bias voltages \cite{mikestikova}.}
 \label{fig:leakage}
 \end{figure}
-
-
-
-
-
-
