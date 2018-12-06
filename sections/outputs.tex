@@ -2,7 +2,7 @@
 The thermo-electrical model provides a wide range of predictions for the operation of the strip system. A detailed discussion of all results would only be of interest to ITk strip system experts and is beyond the scope of this article. Instead, we present here a subset of results to demonstrate the capabilities and use of the thermo-electrical model for the design of the detector system.
 
 \subsection{Operational scenarios}\label{sec:opscenarios}
-To study the different aspects of our predictions for the operation of the ITk strip system throughout its lifetime, we performed the calculation of the system parameters over the expected 14 years of operation in monthly steps as outlined in section~\ref{sec:running}. Time-dependent inputs to the calculations were given from the expected performance of the LHC (Fig.~\ref{fig:lhc_profile}) and different profiles for the cooling temperature. We studied flat cooling temperature scenarios at different temperatures starting at $-35^\circ$C, the lowest evaporation temperature achievable with the ITk evaporative CO$_2$ cooling system, and a `ramp' scenario in which the cooling temperature starts at 0$^\circ$C and gradually is lowered down to $-35^\circ$C over the course of 10 years (Fig.~\ref{fig:coolant_ramp}).
+To study the different aspects of our predictions for the operation of the ITk strip system throughout its lifetime, we performed the calculation of the system parameters over the expected 14 years of operation in monthly steps as outlined in section~\ref{sec:running}. Time-dependent inputs to the calculations were given from the expected performance of the LHC (Fig.~\ref{fig:lhc_profile}) and different profiles for the cooling temperature. We studied flat cooling temperature scenarios at different temperatures with the lowest being $-35^\circ$C, the lowest evaporation temperature achievable with the ITk evaporative CO$_2$ cooling system, and a `ramp' scenario in which the cooling temperature starts at 0$^\circ$C and gradually is lowered down to $-35^\circ$C over the course of 10 years (Fig.~\ref{fig:coolant_ramp}).
 
 \begin{figure}[ht]
 \centering
@@ -67,7 +67,7 @@ Several module properties predicted by the thermo-electrical model are shown in 
 \centering
 \subfloat[] {\label{fig:modulerampperformance_a} \includegraphics[width=0.4\linewidth]{figures/Tmodule.pdf}}\quad\quad
 \subfloat[] {\label{fig:modulerampperformance_b} \includegraphics[width=0.4\linewidth]{figures/Peosmodule.pdf}}
-\caption{Examples of barrel module performance predictions for the ramp cooling scenario including safety factors. (a) Sensor temperature in the innermost barrel modules. (b) Power in an end-of-stave barrel module in the innermost layer.}
+\caption{Examples of barrel module performance predictions for the ramp cooling scenario including safety factors. (a) Sensor temperature in the innermost barrel modules. (b) Power in an end-of-stave barrel module in the innermost layer. The discontinuities in year 5 and 9 are due to anticipated year-long shutdowns of the LHC.}
 \label{fig:modulerampperformance}
 \end{figure}
 
@@ -75,8 +75,8 @@ Several module properties predicted by the thermo-electrical model are shown in 
 One of the key concerns for the design of the strip system is thermal stability of the system. If the cooling temperature is too high to limit the leakage power from the radiation-damaged sensors to a level where the heat can still be removed, the system is unstable (it goes into `thermal runaway').
 % In this case, there is no solution to the set of equations in the thermo-electrical model anymore, and the numerical search for a solution fails.
 % In the barrel strip system, this occurs in the final year of operation at a cooling temperature of $-15^\circ$C under nominal conditions, and at $-25^\circ$C (in year 13) with safety factors applied.
-In the endcap strip system, this occurs at a cooling temperature of $-15^\circ$C under nominal conditions; in this scenario, thermal runaway would be reached in the 12$^\text{th}$ year of operation. With safety factors applied, thermal runaway is reached at a cooling temperature of $-25^\circ$C (in year 11).
-In the barrel system, where the radiation environment is slightly less intense, the conditions for thermal runaway occur two years later compared to the endcaps.
+In the endcap strip system, this occurs at a cooling temperature of $-15^\circ$C under nominal conditions; in this scenario, thermal runaway would be reached in the 12$^\text{th}$ year of operation. With safety factors applied, thermal runaway will occur at a cooling temperature of $-25^\circ$C (in year 11).
+In the barrel system, where the radiation environment is slightly less intense, the conditions for thermal runaway occur at the same cooling temperatures but two years later than in the endcaps.
 As the design cooling temperature of the ITk cooling system is $-35^\circ$C, we have confidence that the ITk strip system has a sufficient margin for thermal stability.
 
 Beyond the issue of stability, the thermo-electrical model delivers predictions for the development of current and power requirements for the overall system. Some of the predictions are shown in figure~\ref{fig:systemperformance}. Again, the different timescales of the various radiation-induced effects are visible; ignoring this time dependence could lead to overspecification of some system aspects like the total cooling power.
@@ -85,13 +85,13 @@ Beyond the issue of stability, the thermo-electrical model delivers predictions 
 \centering
 \subfloat[] {\includegraphics[width=0.45\linewidth]{figures/Totalbarrelpower-30.pdf}}\quad\quad
 \subfloat[] {\includegraphics[width=0.45\linewidth]{figures/Endcap_ModulePower.eps}}
-\caption{Examples for system performance predictions. (a) Barrel total power requirements for flat $-30^\circ$ cooling and including safety factors. The plot shows the stacked power requirements for the four barrels (orange: innermost barrel, blue: outermost barrel). Full colour indicates power from the front-end electronics, greyed parts are contributions from HV power for the four barrels. (b) The power requirements for each of the 36 endcap modules, labeled according to their ring type and disk position, for flat $-30^\circ$ cooling and with safety factors. The solid black line indicates the average power of the modules.}
+\caption{Examples for system performance predictions. (a) Barrel total power requirements for flat $-30^\circ$ cooling and including safety factors. The plot shows the stacked power requirements for the four barrels (orange: innermost barrel, blue: outermost barrel). Full colour indicates power from the front-end electronics, greyed parts are contributions from HV power for the four barrels. The discontinuities in year 5 and 9 are due to anticipated year-long shutdowns of the LHC. (b) The power requirements for each of the 36 endcap modules, labeled according to their ring type and disk position, for flat $-30^\circ$ cooling and with safety factors. The solid black line indicates the average power of the modules.}
 \label{fig:systemperformance}
 \end{figure}
 
-These predictions are now used throughout the strip project to consistently size the power supply and cooling systems. Including safety factors in the predictions gives us some confidence that the designs are robust; by using commonly agreed safety factors, we ensure a consistent use of safety factors throughout the project and prevent safety factor creep.
+The predictions from this model are now used throughout the strip project to consistently size the power supply and cooling systems. Including safety factors in the predictions gives us some confidence that the designs are robust; by using commonly agreed safety factors, we ensure a consistent use of safety factors throughout the project and prevent safety factor creep.
 
-Because of the different timescales for the peak power due to the TID effect and the radiation-induced sensor leakage, there is room to optimize the cooling temperature profile for minimal power. The thermo-electrical model is a powerful tool to plan such an optimized cooling profile. In fact, the cooling `ramp' scenario introduced in Section~\ref{sec:opscenarios} is the result of such an optimization (Fig.~\ref{fig:rampoptimization}).
+Because of the different timescales for the peak power due to the TID effect and the radiation-induced sensor leakage, there is room to optimize the cooling temperature profile for minimal total power in the strip system. The thermo-electrical model is a powerful tool to plan such an optimized cooling profile. In fact, the cooling `ramp' scenario introduced in Section~\ref{sec:opscenarios} is the result of such an optimization (Fig.~\ref{fig:rampoptimization}).
 
 \begin{figure}[ht]
 \centering
