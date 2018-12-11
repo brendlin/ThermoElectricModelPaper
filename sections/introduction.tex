@@ -49,7 +49,7 @@ modelled separately in the thermo-electrical model.
 A key input to the thermo-electrical calculation is the radiation environment of the strip system, as several inputs depend on radiation damage effects. The sensor leakage current can be parametrized as  a function of the fluence expressed in 1~MeV neutron-equivalents, and the TID effect on the digital chip current will be described as a function of the total ionizing dose rate (more details on its dependencies can be found in Section~\ref{fig:feast_eff}). 
 
 Predictions for both of these quantities have been generated for each point in the ITk using the FLUKA particle transport code and the PYTHIA8 event generator (Fig.~\ref{fig:radiation}) \cite{background}. In the barrel system, both of these distributions display a strong dependence on $r$ but a weak $z$-dependence. Accordingly, we make the simplifying assumption that modules within the same barrel layer have identical fluence and TID, and model four different radiation profiles (one for each barrel layer). In the endcaps, the radiation levels vary significantly over the length of the petals and from disk to disk; therefore, we model each disk and ring position separately (36 in total).
-% Note here: the fluence is a justification for modeling layer 0-3 separately, and using
+% Note here: the fluence is a justification for modelling layer 0-3 separately, and using
 % the flux/TID to model 6 separate versions of a petal.
 % The module design justifies 2 (6) different module types in the barrel (endcap).
 
