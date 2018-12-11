@@ -5,7 +5,7 @@ The cooling path between the sources dissipating electrical power and the coolin
 \Delta T_i \equiv T_i - T_C = R_i P_i + \left(R_\text{C} + R_\text{M}\right)\sum_j P_j,
 \label{eq:deltaT_expression}
 \end{equation}
-where we have momentarily ignored the EOS contribution.
+where the index $j$ runs over all powered nodes. (We have momentarily ignored the contribution from the EOS card.)
 
 In order to extract the thermal impedances for the thermal network model, the finite element model is run multiple times, with each heat source (or group of similar sources) switched on in turn with a representative amount of heat. In each of these cases, the temperature is calculated for all nodes in the thermal network model (Figure~\ref{fig:thermalmodel}). The temperature of a node is here taken as the average of the temperatures for all the gridpoints in the FEA model within the volume of the object corresponding to the node\footnote{This is particularly interesting in the case of the sensor, which fills a large volume, with a potentially large range of temperatures. Ref.~\cite{Beck:2010zzd} is not clear about the exact definition of the sensor temperature to be used for the calculation of the thermal impedance. In fact, at the time we were still using the maximum sensor temperature for the calculation of thermal stability. Since then we have acquired more experience with thermal network models and found that the best agreement is achieved if the average sensor temperature is used.}. The thermal impedances are then obtained from a fit of Eq.~\ref{eq:deltaT_expression} using the temperature data for all nodes for all cases of heat injection.
 
@@ -51,7 +51,7 @@ Because of the nature of the network, the fitted value for the common impedance 
 \subfloat[Barrel short strip module] {\includegraphics[width=0.45\linewidth]{figures/ThermalImpedanceFit_ShortStripEOS_Rcm.eps}}\quad\quad
 \subfloat[Endcap R0 module] {\includegraphics[width=0.45\linewidth]{figures/ThermalImpedanceFit_R0_Rcm.eps}}
 \caption{The relationship between the temperature rise observed in the FEA for a specific component and the heat injected in another component. The slope of the fitted line is the estimate for $R_\text{CM}$.
-(a) The fit for a short-strip barrel module adjacent to the EOS. (b) The fit for the endcap R0 module.
+(a) The fit for a short-strip barrel module adjacent to the EOS card. (b) The fit for the endcap R0 module.
 For each data point marker, the source of power is indicated by the shape, and the measured component is indicated
 by the color.
 %% In (b), the error bars represent the standard deviation of temperatures of
