@@ -23,7 +23,7 @@ for a range of load currents up to the maximum design current of 4A.
 
 The data was then fit with a function with sufficient parameters to ensure reasonable agreement; the
 choice of functional form has no physical interpretation. Figure~\ref{fig:feast_eff} depicts the
-FEAST efficiency data and the parameterized fit used in the model. The parameterization fits the data
+FEAST efficiency data and the parametrized fit used in the model. The parametrization fits the data
 with an accuracy better than 1\%; this uncertainty in the FEAST efficiency modelling is small
 compared to other uncertainty sources, and is therefore neglected in our model.
 
@@ -65,12 +65,12 @@ many irradiation campaigns have been conducted using a variety of radiation sour
 the effect at different temperatures and dose rates.
 The data collected from these studies was used to develop a model of the TID bump
 that estimates the digital current increase given the total ionizing dose, the dose rate,
-and the operating temperature of the chip. This parameterization, which is depicted in
+and the operating temperature of the chip. This parametrization, which is depicted in
 Fig~\ref{tid_bump}, is used as an input to the thermo-electrical model in order to correctly model the
 ABC and HCC currents. The TID bump is assumed to fully apply to the HCC digital current, and apply to
 69\% of the ABC digital current (according to our understanding of its digital circuitry).
 
-The TID bump displays certain key features, which are reflected in the parameterization:
+The TID bump displays certain key features, which are reflected in the parametrization:
 first, the effect is larger at colder temperatures and higher dose rates. This means it can be
 mitigated by operating the chips at higher temperature (note that the dose rate is determined by the LHC operational conditions).
 Second, the figure illustrates how chips receiving different dose rates will reach their maximum
@@ -80,12 +80,12 @@ depending on the position of the module in the detector. The effect means that t
 power will be smaller than the sum of the maximum power of each module, as each chip reaches
 its maximum at a different point in time.
 
-The TID bump is an important source of uncertainty in our model. The experimental data exhibits
+The TID bump is an important source of uncertainty in our model. The experimental data exhibit
 a relatively large variation in the TID bump effect, in particular
 between different batches of the same type of chip delivered by the manufacturer, suggesting an unknown
 effect in the fabrication process. To estimate the uncertainty in the TID bump,
-the parameterized function is fit again using only the worst-performing data (defined as having the
-largest TID bump effect). This ``pessimistic'' parameterization is used as a safety factor to estimate
+the parametrized function is fit again using only the worst-performing data (defined as having the
+largest TID bump effect). This ``pessimistic'' parametrization is used as a safety factor to estimate
 the detector performance in worst-case scenarios.
 
 The irradiations of individual chips have typically been performed at constant dose rate and temperature.
@@ -94,7 +94,7 @@ In our current parametrization, we use only the instantaneous value of these two
 
 \subsubsection{Radiation-dependent leakage current}
 
-The radiation-induced leakage current can be parametrized as a function of the hadron fluence expressed in 1~MeV equivalent neutrons. The parametrizations we have used for the evaluation of our model are shown in Fig.~\ref{fig:leakage} for a reference sensor temperature of $-15^\circ$C \cite{mikestikova}. In the model, the leakage current is scaled to a given sensor temperature using Eq.~\ref{eq:leakage_current_temp_dependence}.
+The radiation-induced sensor leakage current can be parametrized as a function of the hadron fluence expressed in 1~MeV equivalent neutrons. The parametrizations we have used for the evaluation of our model are shown in Fig.~\ref{fig:leakage} for a reference sensor temperature of $-15^\circ$C \cite{mikestikova}. In the model, the leakage current is scaled to a given sensor temperature using Eq.~\ref{eq:leakage_current_temp_dependence}.
 
 \begin{figure}[ht]
 \centering
