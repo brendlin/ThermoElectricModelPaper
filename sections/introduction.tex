@@ -14,9 +14,9 @@ In principle, the temperatures in the system for a given set of operational para
 \subsection{The ATLAS strip system}
 The strip system for the ATLAS Phase-II upgrade consists of two parts: the barrel system, comprised of four concentric cylindrical barrels, and two endcaps consisting of six disks each.
 
-In the barrel, the detector modules are made of square sensors ($96.85\times 96.72$~mm$^2$) with a hybrid on top, which hosts the front-end chips (ABC130 \cite{abc130} and HCC \cite{Collaboration:2017mtb}) as well as circuitry to convert the supply voltage of larger than 10~V to the chip voltage of 1.5~V, controlled by the FEAST chip. The modules are glued onto both sides of a composite sandwich that contains two parallel thin-wall titanium cooling pipes embedded in carbon foam (Allcomp K9)  between two facesheets of UHM carbon fibre (3 layers of K13C2U/EX1515) with a co-cured Kapton/copper low-mass tape. A model of this geometry is shown in Fig.~\ref{fig:barrelgeometry}. During final operation, cooling will be achieved by evaporating CO$_2$ in the cooling pipes with a final target temperature no higher than $-35^\circ$C anywhere along the stave.
+In the barrel, the detector modules are made of square sensors ($96.85\times 96.72$~mm$^2$) with a hybrid on top, which hosts the front-end chips (ABC130 \cite{abc130} and HCC \cite{Collaboration:2017mtb}) as well as circuitry to convert the supply voltage of larger than 10~V to the chip voltage of 1.5~V, controlled by the FEAST chip. The modules are glued onto both sides of a composite sandwich (local support) that contains two parallel thin-wall titanium cooling pipes embedded in carbon foam (Allcomp K9)  between two facesheets of UHM carbon fibre (3 layers of K13C2U/EX1515) with a co-cured Kapton/copper low-mass tape. A model of this geometry is shown in Fig.~\ref{fig:barrelgeometry}. During final operation, cooling will be achieved by evaporating CO$_2$ in the cooling pipes with a final target temperature no higher than $-35^\circ$C anywhere along the stave.
 
-The geometry of the stave is uniform along its length, with the exception of the end region of the stave, where an End-Of-Substructure (EOS) card is mounted on both surfaces. The EOS card shares part of its heat path with the module; underneath the EOS card, the thermal path is degraded by the presence of electrically-insulating ceramic pipe sections. The thermal and electrical properties of a module adjacent to the EOS card (hereafter refered to as an `EOS module') are sufficiently different from other modules along the lenth of the stave (`normal modules') to warrant separate treatment in the thermo-electrical model of the barrel.
+The geometry of the stave is uniform along its length, with the exception of the end region of the stave, where an End-Of-Substructure (EOS) card is mounted on both surfaces. The EOS card shares part of its heat path with the adjacent module; underneath this module (hereafter referred to as an `EOS module'), the thermal path is degraded by the presence of electrically-insulating ceramic pipe sections. The thermal and electrical properties of an EOS module are sufficiently different from other modules along the length of the stave (`normal modules') to warrant separate treatment in the thermo-electrical model of the barrel. 
 
 \begin{figure}[ht]
 \centering
@@ -35,7 +35,7 @@ or two irregularly-shaped silicon sensors and a varying number of front-end chip
 The EOS card is located adjacent to the R5 module, but the
 cooling pipes run directly underneath it without a shared heat path, in contrast to the barrel EOS card.
 The remaining module and petal core design details are largely identical to the barrel module description above.
-Because of the unique geometry of each module in a petal, each of the six different types of module are
+Because of the unique geometry of each module in a petal, each of the six different types of module is
 modelled separately in the thermo-electrical model.
 
 \begin{figure}[ht]

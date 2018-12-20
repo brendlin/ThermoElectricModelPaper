@@ -1,6 +1,6 @@
 
 The electrical model consists of low-voltage (LV) and high-voltage (HV) circuits, depicted in
-Fig.~\ref{electrical_model}. The LV current (11~V) is used to power the hybrid controller chips (HCCs),
+Fig.~\ref{electrical_model}. The LV current (supplied at 11~V) is used to power the hybrid controller chips (HCCs),
 ATLAS Binary Chips (ABCs) and Autonomous Monitoring and Control chip (AMAC) located on PCBs that are
 glued directly onto the surface of the sensor.
 These chips require between 1.5 and 3.3~V, which are provided by the temperature-dependent
@@ -42,7 +42,7 @@ module in two ways. First,
 the tape itself will generate some heat according to the amount of current passing through it; this
 source of heat is accounted for in the model, however the contribution to the total module power
 is negligible.
-Second, due to the voltage loss along the traces, a slightly lower voltage is supplied to modules on one end of the substructure (farthest from the EOS card).
+Second, due to the voltage loss along the traces, there is a slight reduction in voltage supplied to successive modules along the substructure.
 The treatment of this effect is slightly different in the barrel and
 endcap models: in the barrel, the voltage delivered to every module is averaged to 10.5~V; in the endcap,
 the $\Delta V$ is estimated based on the calculated expected power loss along the tape for each module.

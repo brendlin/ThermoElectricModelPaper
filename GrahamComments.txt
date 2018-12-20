@@ -39,3 +39,21 @@ In Section 8,  I am worried about the paragraph 'To verify the level of this agr
 Line 330 claims that 'the network model predicts runaway within 1C of the result from the FEA.'.  The curve that I sent (Georg) showed good agreement for the stand-alone projection using RC and RT as found from the FEA. The TE model (when I checked for the LoS PDR, which is the only direct comparison I have so far) was from memory 3C pessimistic: I put that down to the fact that the fitted coefficients used in the TE model are systematically higher than I get directly from the FEA. 
 
 I am not sure what to do about this.  But whatever I do won't be tonight!!  (It may need some more real work: FEA run or plotting at least). Any thoughts?
+
+
+
+Starting from the beginning and reading slowly, to look for typos:
+
+FIXED. 48 '...glued onto both sides of a composite sandwich...'.   Add  '(local support)' in here, since it is referred to in Figure 1.
+
+IMPLEMENTED SOMETHING SIMILAR. 55 'underneath the EOS card, the thermal path is degraded by ....electrically-insulating ceramic pipe sections'. 'EoS card' here is wrong: this statement should e.g. be moved after the following sentence and refer to the EoS 'module'.
+
+FIXED. 57 'refered' needs two 'r's?  If this is a US spelling then let it be (and similar instances, as long as we are consistent).
+
+FIXED. 58 'lenth' should be 'length'.  (definitely transatlantic!!!)
+
+FIXED. 68 '...are modelled'  should be '...is modelled'   (I think!)
+
+FIXED. 83/84 'The LV current ( 11 V)...'  is a poor juxtaposition of units! Should be e.g. ' The LV current (supplied at 11 V)...' (or similar).
+
+FIXED. 98/99  '...a slightly lower voltage is supplied to module on one end if the substructure (furthest from the EoS card)'.  I think this reads badly. Why not say '...there is a slight reduction in voltage supplied to successive modules along the substructure'.  ???
