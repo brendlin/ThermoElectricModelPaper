@@ -10,15 +10,13 @@ FIXED. 'sensor leakage currents' should probably read ' sensor leakage power'
 
 In fact the list is incomplete since it doesn't mention the tape or RHV that appear in figure 5.
 
-(I have finished reading to the end of the draft paper. Here is a list of points I picked up on, including some that are very trivial.)
-
 FIXED. Section 4.  line 161. ' _.with other nodes having between 5 and 20  C/W.)'    I would drop the construct using the word 'having'  and simply say '_.and other nodes between 5 and 20 C/W'.
 
 FIXED - SWITCHED TO PARAMETRIZATION. (harmonize with Georg). Various places 'parameterization'.  This is the American spelling - so I guess it's fine! It made be jump because I would personally write 'parametrisation" (dropping an 'e' and using 's' instead of 'z'). No action needed I guess!!
 
 Section 5.0.2 line 205: 'The TID bump is assumed to fully apply to the HCC digital current, and apply to 69% of the ABC digital current_'.   This is news to me! In the past I have scaled ALL of the ABC digital current.  Probably I am not up to date with the wisdom of Paul Keener?  Please just confirm that what's written is correct. I would also be interested to know where I can learn about the 69%, for purposes of FEA work over Xmas!.
 
-Line 212 'In both systems the dose rate varies significantly_'.  Personally I'd replace 'significantly' (what does it signify?) by 'appreciably' or some similar word.
+NOT FIXED (Oxford English Dictionary thinks this is fine). Line 212 'In both systems the dose rate varies significantly_'.  Personally I'd replace 'significantly' (what does it signify?) by 'appreciably' or some similar word.
 
 FIXED. Line 215  'The experimental data exhibits_'   should be (I think, plural vs singular) 'The experimental data exhibit_'
 
@@ -30,15 +28,13 @@ CHANGED TO HL-LHC. Section 7.1  Are you happy to refer to the 'LHC' rather than 
 
 Section 7.2 line 277 ' Each safety factor has been estimated ___, and from available data or the absence of such data'    Errrmmmm. Do you really want to say that?  (How can you estimate anything from the absence of data????)  This actually made me laugh! (thank you!).
 
-Table 1: Safety factors.  'Local support build tolerances_'.   Does the reader know what a 'Local support' is?  I couldn't recall it being mentioned, at least not recently, in the text.
+FIXED. Table 1: Safety factors.  'Local support build tolerances_'.   Does the reader know what a 'Local support' is?  I couldn't recall it being mentioned, at least not recently, in the text.
 
 REWORKED FIG. 15. I think that's all the trivial stuff I picked up on.  I didn't spend much time on Figure 15 (which I didn't immediately understand - but I ran out of time and energy!).
 
-In Section 8,  I am worried about the paragraph 'To verify the level of this agreement_.. ' 
+(REWORKED BY G&G) In Section 8,  I am worried about the paragraph 'To verify the level of this agreement_.. ' 
 
-Line 330 claims that 'the network model predicts runaway within 1C of the result from the FEA.'.  The curve that I sent (Georg) showed good agreement for the stand-alone projection using RC and RT as found from the FEA. The TE model (when I checked for the LoS PDR, which is the only direct comparison I have so far) was from memory 3C pessimistic: I put that down to the fact that the fitted coefficients used in the TE model are systematically higher than I get directly from the FEA. 
-
-I am not sure what to do about this.  But whatever I do won't be tonight!!  (It may need some more real work: FEA run or plotting at least). Any thoughts?
+(REWORKED BY G&G) Line 330 claims that 'the network model predicts runaway within 1C of the result from the FEA.'.  The curve that I sent (Georg) showed good agreement for the stand-alone projection using RC and RT as found from the FEA. The TE model (when I checked for the LoS PDR, which is the only direct comparison I have so far) was from memory 3C pessimistic: I put that down to the fact that the fitted coefficients used in the TE model are systematically higher than I get directly from the FEA. 
 
 
 
