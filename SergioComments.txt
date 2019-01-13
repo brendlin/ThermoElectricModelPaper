@@ -1,0 +1,79 @@
+Sergio kindly read the paper and gave us some feedback (using this version). I copied them below, and fixed the ones that probably don't need any discussion. For the rest, perhaps there a few things to discuss / follow up:
+
+L50: "3 layers of K13C2U/EX1515..." add "in a 0/90/0 orientation"
+ - Maybe too much info? Did not change for now....
+
+L107: In the next weeks a decision on the nominal voltage will be taken.
+ - Not sure if this will impact the paper, since it may not make sense to change the assumptions this late in the process.
+
+Figure 5: Is "Qs" the sensor? Maybe worth mentioning "Qs" explicitly in the text. Also, why Qs and not Ps ?
+ - Georg?
+
+L142-152: Sergio was quite confused by this. Perhaps we need to improve the clarity a bit more.
+
+Figure 10: Do you extract the expected doserate from here?
+ - Consider adding the following to the "7.1 Operational Scenarios" section: "The total ionizing dose rate (required to calculate the TID bump) and the NIEL fluence (used to determine the sensor leakage current) are calculated for each month using the information in Fig 3 and Fig. 10a." (We should also maybe add the definition of "NIEL" to seciton 1.2 Radiation Environment.)
+
+Figure 11: I am a bit surprised about the thermal impedance SF not being relevant for the module power...?
+ - I checked to see whether we might expect this. Indeed, the temperatures do increase with a higher thermal impedance safety factor... e.g. the FEAST temperature increases by about 7°. But this causes only a ~1% decrease in FEAST efficiency (see Figure 7). And actually a higher temperature will *reduce* the effect of the TID bump, so in fact the module power decreases slightly in year 2. So the behavior seems reasonable.
+
+Figure 14: Put the legend on the figure
+ - Georg, is this possible?
+
+Footnote 2: "nice touch : )"
+
+Sergio: can you remind me about which other references can be updated (beyond Ref. 11)?
+
+~~~~~~~~~~
+Things I already fixed, but feel free to speak up if you disagree:
+
+Footnote 1: "...arrested by overcurrent limits" --> could write "compliance limits" instead, but overcurrent is also ok.
+ - Kept this as-is for now.
+
+L27: The T-dependence of the FEAST should be explained with as much detail as the TID effect.
+ - Added the following sentence: "The FEAST chip has an efficiency that decreases at higher temperatures; its efficiency also depends on the magnitude of the load current."
+
+L45: "hybrid" should be plural to match "sensors" and "modules".
+ - Fixed.
+
+L49: UHM carbon fibre --> "ultra high modulus carbon fibre"
+ - Fixed.
+
+L50: "with a co-cured Kapton/copper low-mass tape" --> sounds like the the facesheets contain the tape, switch to ", co-cured together with a..."
+ - Fixed.
+
+L62: irregularly-shaped --> "wedge-shaped"
+ - Fixed.
+
+L86: LDO regulator -> define the acronym.
+ - Fixed.
+
+L91-94: No need to specifically mention GBLD, LpGBT and GBTIA, it just adds confusion. (If you mention them, you need to define the acronyms.)
+ - Defined the acronyms, since they are mentioned in Figure 4, so it is difficult to avoid them.
+
+L94: "Some modules ... contain two GBLD and LpGBT chips." --> "Some staves"
+ - Fixed.
+
+L101: "in the endcap, the DeltaV is estimated based on the calculated expected power loss along the tape for each module." How do you do this? Do you have a certain Cu cross-section for the LV lines?
+ - The tape resistance in the endcap is estimated as 0.02 Ohm / module as a "worst case" estimate. (I do not remember exactly how this number came up, but it came from a similar estimate in the barrel at the time.) The estimated power loss is just (R * sum(I^2)) based on the cumulative current going through the tape for a particular module (e.g. R5 sees the current from R0-R4). I agree it would be better to get a more precise tape resistance, but it's a very small (%-level) effect so I did not dwell on it.
+
+L169-170: "However, if this level of realism is required ... then the inclusion ... is possible." Sergio thinks that this invites the question of why we don't include it.
+ - Maybe we can add a note that the effect of such inclusion would have a small impact on the results?
+
+L178, 193: should be \subsection instead of \subsubsection
+ - Fixed.
+
+L186: NTC and PTAT: define the acronyms.
+ - Fixed.
+
+L299: "Under nominal conditions" - it's not clear that this refers to safety factors.
+ - changed to "... under nominal conditions (i.e. with no safety factors applied)"
+
+L300: Should be "With *all* safety factors applied"
+ - Fixed.
+
+Figure 15: Needs clarification about whether safety factors are applied.
+ - Fixed (safety factors are applied in these plots).
+
+L398: Remove Ref. [11] (internal communication).
+ - Fixed.

@@ -8,7 +8,7 @@ The uncertainty in the experimental data, and in our modelling assumptions,
 are estimated here and considered in the evaluation of safety factors,
 described in detail in Section~\ref{sec:safety_factors}.
 
-\subsubsection{DC-DC converter}
+\subsection{DC-DC converter}
 
 The DC-DC converter, controlled by the FEAST chip, supplies a low-voltage (1.5~V) current to the ABC130 and HCC front-end
 chips on the module.
@@ -18,7 +18,7 @@ measurements have been performed to characterize the dependence and fitted with 
 
 For the measurement, the FEAST power board was glued to an aluminum cold plate, cooled
 with CO$_2$, and powered with the nominal working input and output voltages (11~V input, 1.5~V output).
-The temperature of the FEAST was measured with an NTC thermistor and a PTAT sensor residing on the FEAST
+The temperature of the FEAST was measured with an NTC (negative temperature coefficient) thermistor and a PTAT (point to absolute temperature) sensor residing on the FEAST
 for a range of load currents up to the maximum design current of 4A.
 
 The data was then fit with a function with sufficient parameters to ensure reasonable agreement; the
@@ -40,7 +40,7 @@ presented as a function of current load for curves of equal temperature.
 \end{figure}
 
 
-\subsubsection{Digital current increase of chips using 130~nm CMOS technology}
+\subsection{Digital current increase of chips using 130~nm CMOS technology}
 \label{sec:tid_explanation}
 
 The ABC and HCC chips, designed using IBM 130 nm CMOS 8RF technology, are known to suffer from an
@@ -94,11 +94,11 @@ In our current parametrization, we use only the instantaneous value of these two
 
 \subsubsection{Radiation-dependent leakage current}
 
-The radiation-induced sensor leakage current can be parametrized as a function of the hadron fluence expressed in 1~MeV equivalent neutrons. The parametrizations we have used for the evaluation of our model are shown in Fig.~\ref{fig:leakage} for a reference sensor temperature of $-15^\circ$C \cite{mikestikova}. In the model, the leakage current is scaled to a given sensor temperature using Eq.~\ref{eq:leakage_current_temp_dependence}.
+The radiation-induced sensor leakage current can be parametrized as a function of the hadron fluence expressed in 1~MeV equivalent neutrons. The parametrizations we have used for the evaluation of our model are shown in Fig.~\ref{fig:leakage} for a reference sensor temperature of $-15^\circ$C. In the model, the leakage current is scaled to a given sensor temperature using Eq.~\ref{eq:leakage_current_temp_dependence}.
 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.45\linewidth]{figures/SensorLeakagePower.eps}
-\caption{Parametrization used for the leakage current at $-15^\circ$C as a function of the fluence for two different sensor bias voltages \cite{mikestikova}.}
+\caption{Parametrization used for the sensor leakage current at $-15^\circ$C as a function of the fluence for two different sensor bias voltages.}
 \label{fig:leakage}
 \end{figure}

@@ -4,7 +4,7 @@ Fig.~\ref{electrical_model}. The LV current (supplied at 11~V) is used to power 
 ATLAS Binary Chips (ABCs) and Autonomous Monitoring and Control chip (AMAC) located on PCBs that are
 glued directly onto the surface of the sensor.
 These chips require between 1.5 and 3.3~V, which are provided by the temperature-dependent
-FEAST DC-DC converter (labeled bPOL12V in Fig.~\ref{electrical_model}) and an LDO regulator (labeled bPOL12).
+FEAST DC-DC converter (labeled bPOL12V in Fig.~\ref{electrical_model}) and an LDO (low-dropout) regulator (labeled bPOL12).
 The number of chips and converters on each module vary according to the design of
 each different module type (barrel short-strip and long-strip modules, and six different endcap
 module designs).
@@ -30,12 +30,13 @@ The electrical model of the ITk Strip barrel and endcap modules. Green arrows re
 %% Again, the endcap module R3 differs from other modules, containing two AMACs each powered by its own
 %% LDO.
 
-The LV current is also delivered to the EOS card to power various data transfer components
-(the GBLD, LpGBT and GBTIA). A FEAST identical to the one used on the module is used to step the
+The LV current is also delivered to the EOS card to power various data transfer components:
+the Gigabit Trans-impedance Amplifier (GBLD), low power GigaBit Transceiver (LpGBT) and Gigabit Transimpedance Amplifier (GBTIA) chips.
+A FEAST identical to the one used on the module is used to step the
 voltage down from 11~V to 2.5~V, and an additional LDO regulator brings the voltage down further for some components.
 %% The EOS cards on the endcap petals and the long-strip staves have one GBLD and one LpGBT;
 %% EOS cards on the short-strip staves contain two of each. All EOS cards contain one GBTIA.
-Some modules (the short-strip barrel staves) contain two GBLD and LpGBT chips.
+The short-strip barrel staves contain two GBLD and LpGBT chips.
 
 The bus tape, which carries both LV and HV currents, has a small ohmic resistance, which impacts the
 module in two ways. First,

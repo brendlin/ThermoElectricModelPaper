@@ -60,3 +60,14 @@ FIXED. 68 '...are modelled'  should be '...is modelled'   (I think!)
 FIXED. 83/84 'The LV current ( 11 V)...'  is a poor juxtaposition of units! Should be e.g. ' The LV current (supplied at 11 V)...' (or similar).
 
 FIXED. 98/99  '...a slightly lower voltage is supplied to module on one end if the substructure (furthest from the EoS card)'.  I think this reads badly. Why not say '...there is a slight reduction in voltage supplied to successive modules along the substructure'.  ???
+
+FIXED. 151 The following sentence definitely needs re-writing, in a more concise way! 'The values for the additional component-specific impedances are in turn driven by the observed temperature rise in the component with the heat injected in that particular component', e.g. 'The value of each component-specific impedance is determined from the temperature rise observed when heat is injected into that component'
+
+Footnote 3:  ...is a bit too anecdotal (or perhaps familiar) I think.  I suggest replacing 'In fact, at the time we were still using the maximum sensor temperature for the calculation of thermal stability. Since then we have acquired more experience with thermal network models and found that the best agreement is achieved if the average sensor temperature is used.'
+by: 'Whilst the maximum sensor temperature found from FEA must clearly give a conservative indication of thermal stability, our experience is that the average sensor temperature is a more accurate indicator' ???
+
+In the caption for Figure 16: '... (b) Result of sensor surface temperature calculations using FEA....'
+We should probably add: '(for zero sensor power)'.
+ - Fixed: ", assuming zero sensor power."
+
+(If I were a reviewer I might complain about the lack of info.about the conditions of the plot).
