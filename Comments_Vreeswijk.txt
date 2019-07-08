@@ -1,0 +1,30 @@
+
+Title: Thermoelectric --> uniformize the writing of word throughout the report.
+
+Abstract line 3 -> ''the thermoelectric model" sounds weird as if THE thermoelectriuc model is common knowledge. The model should be introduced in this abstract.
+
+Equaton 1 --> and the text around it. Where is the reference?
+
+Figure 2 is absent
+
+Figure 3 --> I am a but surprised to see ATLAS plots in a report with a very limited number of authors. Does this comply with the usual rules?
+
+Figure 6 (and the text around it) --> it is clear that the data deviates from the line. Are these differences (or their typical deviation) later taken as systematic uncertainty to get an idea on the effect of the stability of the model prediction?
+
+Figure 7b --> I would like to see some points on the curves.(points close in parameter space of the the curves can be added, not?)
+
+Figure 8 --> this important curve is plotted, but I really would like to see some datapoints!
+
+Figure 9 --> Please just drop.
+
+Line 250 --> is true but it sounds not so nice to the avarage reader.
+
+Line 262 --> replace ''errors'''with iuncertainties
+
+Line 275 --> termperaturm contains typo.,Please use spellchecker, because I did not really check spelling and I caugth this one by accident.
+
+Uniformize format Figure X to Fig. X. (Check writing op capital in Section as well)
+
+Line 282 -->  where do you see this? The -15 and 12 years? I guess in Fig 15, but then the order of the figures is not correct, because Fig14 is referenced below. So, I got a bit lost on the relation between figures and text in these sections. Please improve.
+
+Lin 313 --> change error to uncertainties in all cases!
