@@ -7,7 +7,7 @@ The initial value for the module power is used to solve for the sensor power and
 for leakage current, using the thermal balance equation and the relationship from
 Eq.~\ref{eq:leakage_current_temp_dependence}.
 Using this calculated sensor leakage current and temperature, the power and temperature of the module
-components are updated given the inital (year 0, month 0) startup parameters.
+components are updated given the initial (year 0, month 0) startup parameters.
 
 Next, the module conditions of the following month (year 0, month 1) are calculated. Using the component
 temperatures calculated from the previous month and the operational parameters (ionizing dose and dose
@@ -20,7 +20,7 @@ exist, indicating that thermal runaway conditions have been reached.
 In the barrel subsystem, the above procedure is performed four separate times to
 represent the radiation conditions of the four barrel layers located at different radii from the beam axis\footnote{The correct module type, short-strip in the inner two layers and long-strip for the outer two layers, is used for each layer.} for both a normal and an EOS-type module. Thus, eight modules are simulated in total for the barrel (4 layers $\times$ normal/EOS), and they are combined in their proper proportion to simulate the entire barrel system.
 
-In the endcap subsystem, the total ionizing dose and dose rates vary signficantly depending on the
+In the endcap subsystem, the total ionizing dose and dose rates vary significantly depending on the
 position of the module; furthermore, the design of each module on a petal differs significantly.
 Therefore, all 36 module types (6 rings $\times$ 6 disks) are simulated independently, and combined to
 represent the full endcap.
