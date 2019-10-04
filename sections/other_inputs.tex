@@ -90,15 +90,16 @@ the detector performance in worst-case scenarios.
 
 The irradiation of individual chips have typically been performed at constant dose rate and temperature.
 However, both of these parameters will vary as a function of time in the scenarios that we attempt to model.
-In our current parametrization, we use only the instantaneous value of these two parameters, thus neglecting any possible history of the TID effect for a given chip. We also ignore any short-term effects due to variations in the dose rate on the scale of hours or days. This approach is mandated by the lack of more varied experimental data and the absence of a good theoretical model for this effect. This probably constitutes the largest source of unknown error in our model.
+In our current parametrization, we use only the instantaneous value of these two parameters, thus neglecting any possible history of the TID effect for a given chip. We also ignore any short-term effects due to variations in the dose rate on the scale of hours or days. This approach is mandated by the lack of more varied experimental data and the absence of a good theoretical model for this effect. This probably constitutes the largest source of uncertainty in our model.
 
-\subsubsection{Radiation-dependent leakage current}
+\subsection{Radiation-dependent leakage current}
 
-The radiation-induced sensor leakage current can be parametrized as a function of the hadron fluence expressed in 1~MeV equivalent neutrons. The parametrizations we have used for the evaluation of our model are shown in Fig.~\ref{fig:leakage} for a reference sensor temperature of $-15^\circ$C. In the model, the leakage current is scaled to a given sensor temperature using Eq.~\ref{eq:leakage_current_temp_dependence}.
+The radiation-induced sensor leakage current can be parametrized as a function of the hadron fluence expressed in 1~MeV equivalent neutrons.
+We have used linear parametrizations obtained from fits to experimental data taken at 500~V and 700~V at $-15^\circ$C, and scale them to a given sensor temperature using Eq.~\ref{eq:leakage_current_temp_dependence}.
 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.45\linewidth]{figures/SensorLeakagePower.eps}
-\caption{Parametrization used for the sensor leakage current at $-15^\circ$C as a function of the fluence for two different sensor bias voltages.}
-\label{fig:leakage}
-\end{figure}
+%% \begin{figure}[ht]
+%% \centering
+%% \includegraphics[width=0.45\linewidth]{figures/SensorLeakagePower.eps}
+%% \caption{Parametrization used for the sensor leakage current at $-15^\circ$C as a function of the fluence for two different sensor bias voltages.}
+%% \label{fig:leakage}
+%% \end{figure}
