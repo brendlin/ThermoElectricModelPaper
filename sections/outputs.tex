@@ -54,7 +54,7 @@ factors applied at once.}
 
 It is important to note that combining multiple safety factors can have a compounding effect on the system. As an example, the effect of an increased bias voltage combined with a larger digital current will result in a much higher sensor leakage current at the detector end-of-life than either situation occurring individually. The analytical model allows for scenarios like these to be examined quickly and effectively.
 
-\subsubsection{Module properties}
+\subsection{Module properties}
 
 Several module properties predicted by the thermo-electrical model are shown in Figs.~\ref{fig:moduleflatperformance} and~\ref{fig:modulerampperformance} for the barrel system. The different radiation-dependent effects occur on different timescales. The maximum in the digital chip power due to the TID effect occurs relatively early (in year 1 to 4), although the bump has a long tail, particularly in the outer layers of the barrel. The sensor leakage power, on the other hand, grows towards the end of the lifetime of the ITk. If the leakage current continued to increase in the case of further irradiation, or if the cooling temperature were raised, this growth would ultimately lead to thermal runaway. Due to the radial dependence of the radiation environment, the radiation-induced effects are most pronounced in the innermost barrel layers.
 
@@ -74,12 +74,12 @@ Several module properties predicted by the thermo-electrical model are shown in 
 \label{fig:modulerampperformance}
 \end{figure}
 
-\subsubsection{System properties}\label{sec:systemprop}
+\subsection{System properties}\label{sec:systemprop}
 One of the key concerns for the design of the strip system is thermal stability of the system. If the cooling temperature is too high to limit the leakage power from the radiation-damaged sensors to a level where the heat can still be removed, the system is unstable (it goes into `thermal runaway').
 % In this case, there is no solution to the set of equations in the thermo-electrical model anymore, and the numerical search for a solution fails.
 % In the barrel strip system, this occurs in the final year of operation at a cooling temperature of $-15^\circ$C under nominal conditions, and at $-25^\circ$C (in year 13) with safety factors applied.
-To find the cooling temperature $T_\text{C}$ at which this condition is reached, we run the thermo-electrical model repeatedly, increasing $T_\text{C}$ in steps of 5$^\circ$C, until the model finds thermal runaway. In the numeric evaluation of the thermo-electrical model this manifests itself in the absence of a solution to the system of equations. In the endcap strip system, this occurs at a cooling temperature of $-15^\circ$C under nominal conditions (i.e. with no safety factors applied); in this scenario, thermal runaway would be reached in the 12$^\text{th}$ year of operation. With all safety factors applied, thermal runaway would occur at a cooling temperature of $-25^\circ$C (in year 11).
-In the barrel system, where the radiation environment is slightly less intense, the conditions for thermal runaway occur at the same cooling temperatures but two years later than in the endcaps.
+To find the cooling temperature $T_\text{C}$ at which this condition is reached, we run the thermo-electrical model repeatedly, increasing $T_\text{C}$ in steps of 5$^\circ$C, until the model finds thermal runaway. In the numeric evaluation of the thermo-electrical model this manifests itself in the absence of a solution to the system of equations. In the endcap strip system, this occurs at a cooling temperature of $-15^\circ$C under nominal conditions (i.e. with no safety factors applied); in this scenario, thermal runaway would be reached in the 12$^\text{th}$ year of operation. With all safety factors applied, thermal runaway would occur at a cooling temperature of $-25^\circ$C (in year 10).
+In the barrel system, where the radiation environment is slightly less intense, the conditions for thermal runaway occur at the same cooling temperatures, but a few years later than in the endcaps: in the final year of operation and a cooling temperature of $-15^\circ$C under nominal conditions, and at $-25^\circ$C (in year 13) with safety factors applied.
 As the design cooling temperature of the ITk cooling system is $-35^\circ$C, we have confidence that the ITk strip system has a sufficient margin for thermal stability.
 
 Beyond the issue of stability, the thermo-electrical model delivers predictions for the development of current and power requirements for the overall system. Some of the predictions are shown in Fig.~\ref{fig:systemperformance}. Again, the different timescales of the various radiation-induced effects are visible; ignoring this time dependence could lead to over-specification of some system aspects like the total cooling power.
