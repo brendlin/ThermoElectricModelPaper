@@ -31,7 +31,7 @@ The electrical model of the ITk Strip barrel and endcap modules. Green arrows re
 %% LDO.
 
 The LV current is also delivered to the EOS card to power various data transfer components:
-the Gigabit Trans-impedance Amplifier (GBLD), low power GigaBit Transceiver (LpGBT) and Gigabit Trans-impedance Amplifier (GBTIA) chips.
+the Gigabit Laser Driver (GBLD), low power GigaBit Transceiver (LpGBT) and Gigabit Trans-impedance Amplifier (GBTIA) chips.
 A FEAST identical to the one used on the module is used to step the
 voltage down from 11~V to 2.5~V, and an additional LDO regulator brings the voltage down further for some components.
 %% The EOS cards on the endcap petals and the long-strip staves have one GBLD and one LpGBT;
@@ -49,8 +49,8 @@ endcap models: in the barrel, the voltage delivered to every module is averaged 
 the $\Delta V$ is estimated based on the calculated expected power loss along the tape for each module.
 In both cases, the impact of using a different treatment is small.
 
-Finally, the HV current provides the voltage bias on the silicon sensors. An HV multiplexer
+Finally, the HV current provides the bias voltage on the silicon sensors. An HV multiplexer
 switch (HVMUX) can be used to disconnect the sensor from the
 bias line (it requires a 10~M$\Omega$ resistor parallel to the sensor in order to function). Two HV filters with an effective resistance of 10~k$\Omega$ are situated in series with the
 sensor. The nominal operating voltage of the sensor is expected to be 500V, but the system is designed
-to handle a voltage bias of up to 700V.
+to handle a bias voltage of up to 700V.

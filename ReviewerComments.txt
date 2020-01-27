@@ -1,29 +1,86 @@
 
 Reviewer #1: The article is well written, clear and relevant. The only major comment regarding the content is that the relevance of the work could be enhanced substantially by showing the impact of this methodology against more traditional approaches (i.e. computing the cooling power needed for the worst case everywhere). There are three specific points where I feel this should be highlighted:
 - Line 133: it would be interesting to compare the results of the model presented here with those of [5] for the same objects, to highlight the significance of the presented method
+
+> 
+
 - Line 218-219: to understand the relevance of this optimised model, it would be useful to add a comparison of the maximal power drawn according to this model that takes in to account the different peaking times of the TID bumps with the maximum power that would be computed with a more traditional "sum of worst cases" approach.
+
+> 
+
 - Line 317: "ignoring this time dependence could lead to over-specification". Again: it would be good to know if it actually would lead to over-specification. The reader could be presented with some evidence, such as the power that would be needed in a non-time-optimized design.
+
+> 
 
 Other considerations:
 
 Section 1.1 is clear, but possibly too detailed for the scope of this article. I would suggest to remove all details and features that are not also represented in Figure 4
 
+> 
+
 Line 55: "stave" should be defined
+
+> 
+
 Figure 5: Please correct "Tape" into "Tape bus" to match the text
+
+> GEORG
+
 Line 105: It looks strange that the voltage drop is relevant in the endcap and negligible in the barrel. Adding the corresponding <DELTA>V would help clarify.
+
+> 
+
 Line 118: the footnote 2, although interesting, is possibly out of place here and I would suggest removing it
+
+> Agreed - we have removed this footnote.
+
 Line 120: for clarity of language I would replace "These sources consist of the" with a colon(:).
+
+> We implemented your suggestion.
+
 Lines 134-135, and further on on lines 262-262: Is there a specific reason why two different pieces of software (and languages) were used to model the barrel and end-cap? If so the reason would be of interest for the reader, otherwise I would suggest to remove this detail (distracting).
+
+> 
+
 Line 156: Please add to the text a figure for the "level of disagreement" here (±20%, if I well understood the picture), otherwise this piece of information is only available in Figure 6.
+
+> The uncertainties are discussed below this line, separately for the barrel (10%) and endcap (20%). To hopefully clarify this, we have changed the text in L156 to read "... and the level of disagreement, discussed below, is taken as an uncertainty ...".
+
 Footnote 3 page 6: a reference to "our subsequent studies" would be appropriate here.
+
+> GEORG / GRAHAM
+
 Line 210: it is not totally clear where does 69% comes from. I would assume that the digital circuit, as understood by the authors, has 69% of its initial current drawn by a circuit suffering from TID bump and that the rest of the current, instead stays stable. A more detailed sentence might help here.
+
+> 
+
 Line 232: Is the bump described here by a phenomenological model, or is there some kind of modelling of the underlying mechanism? Clarifying this would help understanding the extrapolation potential of this model.
+
+> 
+
 Line 273: A reference to the source of the HL-LHC luminosity profile would be good here.
+
+> GEORG?
+
 Line 274: "cooling profiles with temperatures as low as" -> is this referred to the coolant temperature?
+
+> 
+
 Line 289: "The analytical model" -> it is unclear which model this refers to. The one in reference [5] or the one presented in this work?
+
+> Changed to: "The analytical model presented here ..."
+
 Line 308: It is not clear why in these comparisons both the year and the temperature of run-away change. I would naively think that keeping a fixed coolant temperature would lead to runaway at a time that varies with the size of the safety factor and vice-versa the runaway would happen in a given year at a coolant temperature that depends on the safety factor. The results presented here have both varying years and coolant temperatures, which is difficult to compare. Please provide results at fixed time or coolant temperature, or (if that is not possible), add an explanation of the different year in the comparison.
+
+> 
+
 Line 323: If I understood correctly the timing of the TID bump can be tuned by modifying the running temperature, in a way that decouples the bumps seen in different regions of the detector. If this is the case, it would be good to mention it explicitly here (and possibly in the conclusions in line 366).
+
+> 
+
 Line 344: I would avoid "former" and "latter", as they refer to a long sentence. I suggest using T_0=... and R_T=...
+
+> 
 
 
 Reviewer #2: This article describes a method which can be used to simulate the thermal behaviour of a silicon tracking detector. Compared to a full FEA simulation it uses a very simple representation of the system which can be solved rapidly. This enables the authors to simulate quickly variations of the system parameters and in particular the development of the thermal behaviour of the system with operation time (and therefore irradiation). The achievement lies in the careful determination of the parameters of the simplified model and in the verification of the model through a comparison with full FEA simulations. A verification by measurements on a real representation of the system is, however, missing. Thermal runaway is a particular danger to a silicon tracking detector, caused by the exponential dependence of the radiation induced leakage current on the temperature. The simplified model is used by the authors to evaluate the bounds of safe operation of the ATLAS Phase
@@ -32,15 +89,53 @@ II silicon tracker, considering several sources of systematic uncertainties and 
 The method described in this article is certainly of general interest for anyone who is involved in the design of silicon tracking systems. Beyond the description of the method the article reports about the application of the method to a complex real detector system which serves well to illustrate various aspects. Therefore, I think that it would be useful to publish this article.
 
 Some minor corrections need to be implemented, as listed below. There is one systematic issue which is confusing to the reader and requires re-wording in many places (and figures): The DC-DC ASIC is called either FEAST or bPOL12V in different parts of the article. But these are in fact two different ASICs. It should be clarified which of the two is being used in this system and that name should be used throughout the article.
+
+> 
+
 Line 32: FEA should be spelled out once.
+
+> Introduced in L32: "...can be predicted using finite element analysis (FEA)..."
+
 Line 89: The LDO regulator seems to be called "linPOL12V" in Fig. 4 while the text says "(labelled bPOL12)".
+
+> 
+
 Line 90: "short-strip and long-strip modules" have not been introduced before. 
+
+> 
+
 Line 94: The acronym GBLD is described wrongly as "Gigabit Tran-Impedance Amplifier".
+
+> This is a typo - it should read "Gigabit Laser Driver". Fixed.
+
 Line 96: "... and an additional LDO regulator brings ..." In Fig. 4 this component ist labelled "DCDC2". Please clarify if this is an LDO or a DC-DC converter.
+
+> 
+
 Line 110: "bias voltage" instead of "voltage bias" would be a more common wording (similarly in line 106).
+
+> Fixed in both instances - thank you.
+
 Line 160: "The thermal impedance from the _sensor_ to the sink (R_{CM}) ..." R_{CM} is the resistance between cooling and the module node ("T_{mod}" in Fig.5). The impedance to the sensor should include R_S. Therefore it seems that "sensor" needs to be replaced by something else in this sentence.
+
+> 
+
 Line 177: This section describes three temperature dependent effects (5.1, 5.2, 5.3), not two.
+
+> You are right - we mention three elements now, including the sensor leakage current.
+
 Fig. 7, caption: Besides the ASIC (bPOL12V or FEAST, which one is it?) the efficiency depends on the resistance of the main inductor of the converter. It would be helpful if the type of inductor was specified (inductance and resistance).
+
+> 
+
 Fig. 8, caption:  "...presented as a function of time." Presumably this means time at the indicated dose rate.  This could be stated explicitly.
+
+> 
+
 Line 263: Could you add a comparison or at least a coarse estimation how long this analysis would have taken if full FEA simulations had to be used.
+
+> 
+
 Line 380: "...si bulk.." should probably read Si bulk
+
+> Fixed - thank you.
