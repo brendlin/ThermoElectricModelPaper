@@ -48,7 +48,7 @@ Line 156: Please add to the text a figure for the "level of disagreement" here (
 
 Footnote 3 page 6: a reference to "our subsequent studies" would be appropriate here.
 
-> GEORG / GRAHAM
+> GEORG / GRAHAM ?
 
 Line 210: it is not totally clear where does 69% comes from. I would assume that the digital circuit, as understood by the authors, has 69% of its initial current drawn by a circuit suffering from TID bump and that the rest of the current, instead stays stable. A more detailed sentence might help here.
 
@@ -72,7 +72,7 @@ Line 289: "The analytical model" -> it is unclear which model this refers to. Th
 
 Line 308: It is not clear why in these comparisons both the year and the temperature of run-away change. I would naively think that keeping a fixed coolant temperature would lead to runaway at a time that varies with the size of the safety factor and vice-versa the runaway would happen in a given year at a coolant temperature that depends on the safety factor. The results presented here have both varying years and coolant temperatures, which is difficult to compare. Please provide results at fixed time or coolant temperature, or (if that is not possible), add an explanation of the different year in the comparison.
 
-> 
+> The text seems to have caused confusion, so we have reworded it: "To find the cooling temperature $T_\text{C}$ at which this condition is reached, we make repeated simulations of the ITk strip system using the thermo-electrical model, with each simulation representing the full 14-year operation of the ITk at a fixed $T_\text{C}$. Between simulations, $T_\text{C}$ is increased in steps of 5$^\circ$C until the model finds thermal runaway." (Therefore, runaway occurs in a given simuation that has a fixed Tc, at some point during the 14-year lifetime of the detector, and this is what we are referencing when we quote the Tc and the year of runaway.) Please let us know if further clarification is required.
 
 Line 323: If I understood correctly the timing of the TID bump can be tuned by modifying the running temperature, in a way that decouples the bumps seen in different regions of the detector. If this is the case, it would be good to mention it explicitly here (and possibly in the conclusions in line 366).
 
@@ -80,7 +80,7 @@ Line 323: If I understood correctly the timing of the TID bump can be tuned by m
 
 Line 344: I would avoid "former" and "latter", as they refer to a long sentence. I suggest using T_0=... and R_T=...
 
-> 
+> Fixed as suggested.
 
 
 Reviewer #2: This article describes a method which can be used to simulate the thermal behaviour of a silicon tracking detector. Compared to a full FEA simulation it uses a very simple representation of the system which can be solved rapidly. This enables the authors to simulate quickly variations of the system parameters and in particular the development of the thermal behaviour of the system with operation time (and therefore irradiation). The achievement lies in the careful determination of the parameters of the simplified model and in the verification of the model through a comparison with full FEA simulations. A verification by measurements on a real representation of the system is, however, missing. Thermal runaway is a particular danger to a silicon tracking detector, caused by the exponential dependence of the radiation induced leakage current on the temperature. The simplified model is used by the authors to evaluate the bounds of safe operation of the ATLAS Phase
@@ -130,11 +130,11 @@ Fig. 7, caption: Besides the ASIC (bPOL12V or FEAST, which one is it?) the effic
 
 Fig. 8, caption:  "...presented as a function of time." Presumably this means time at the indicated dose rate.  This could be stated explicitly.
 
-> 
+> KURT
 
 Line 263: Could you add a comparison or at least a coarse estimation how long this analysis would have taken if full FEA simulations had to be used.
 
-> 
+> YU-HENG / GRAHAM ?
 
 Line 380: "...si bulk.." should probably read Si bulk
 
