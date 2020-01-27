@@ -2,33 +2,35 @@
 Reviewer #1: The article is well written, clear and relevant. The only major comment regarding the content is that the relevance of the work could be enhanced substantially by showing the impact of this methodology against more traditional approaches (i.e. computing the cooling power needed for the worst case everywhere). There are three specific points where I feel this should be highlighted:
 - Line 133: it would be interesting to compare the results of the model presented here with those of [5] for the same objects, to highlight the significance of the presented method
 
-> 
+> GEORG ?
 
 - Line 218-219: to understand the relevance of this optimised model, it would be useful to add a comparison of the maximal power drawn according to this model that takes in to account the different peaking times of the TID bumps with the maximum power that would be computed with a more traditional "sum of worst cases" approach.
 
-> 
+> KURT AND GEORG (CALCULATION)
 
 - Line 317: "ignoring this time dependence could lead to over-specification". Again: it would be good to know if it actually would lead to over-specification. The reader could be presented with some evidence, such as the power that would be needed in a non-time-optimized design.
 
-> 
+> KURT AND GEORG (CALCULATION)
 
 Other considerations:
 
 Section 1.1 is clear, but possibly too detailed for the scope of this article. I would suggest to remove all details and features that are not also represented in Figure 4
 
-> 
+> ?
 
 Line 55: "stave" should be defined
 
-> 
+> GEORG
 
 Figure 5: Please correct "Tape" into "Tape bus" to match the text
 
-> GEORG
+> GEORG (FIGURE CHANGE)
 
 Line 105: It looks strange that the voltage drop is relevant in the endcap and negligible in the barrel. Adding the corresponding <DELTA>V would help clarify.
 
-> 
+> Reworded, adding the values from the endcap: "The treatment of this effect is slightly different in the barrel and endcap models: in the barrel, the
+voltage delivered to every module is averaged to 10.5~V; in the endcap, the $\Delta V$ is estimated based on the calculated expected power loss along the
+tape for each module and varies between 10.8 and 11~V. In both the barrel and endcap systems, the impact of using a different treatment is small."
 
 Line 118: the footnote 2, although interesting, is possibly out of place here and I would suggest removing it
 
@@ -40,7 +42,7 @@ Line 120: for clarity of language I would replace "These sources consist of the"
 
 Lines 134-135, and further on on lines 262-262: Is there a specific reason why two different pieces of software (and languages) were used to model the barrel and end-cap? If so the reason would be of interest for the reader, otherwise I would suggest to remove this detail (distracting).
 
-> 
+> ?
 
 Line 156: Please add to the text a figure for the "level of disagreement" here (±20%, if I well understood the picture), otherwise this piece of information is only available in Figure 6.
 
@@ -52,15 +54,15 @@ Footnote 3 page 6: a reference to "our subsequent studies" would be appropriate 
 
 Line 210: it is not totally clear where does 69% comes from. I would assume that the digital circuit, as understood by the authors, has 69% of its initial current drawn by a circuit suffering from TID bump and that the rest of the current, instead stays stable. A more detailed sentence might help here.
 
-> 
+> GEORG ?
 
 Line 232: Is the bump described here by a phenomenological model, or is there some kind of modelling of the underlying mechanism? Clarifying this would help understanding the extrapolation potential of this model.
 
-> 
+> GEORG / GRAHAM ?
 
 Line 273: A reference to the source of the HL-LHC luminosity profile would be good here.
 
-> GEORG?
+> GEORG ?
 
 Line 274: "cooling profiles with temperatures as low as" -> is this referred to the coolant temperature?
 
@@ -76,7 +78,9 @@ Line 308: It is not clear why in these comparisons both the year and the tempera
 
 Line 323: If I understood correctly the timing of the TID bump can be tuned by modifying the running temperature, in a way that decouples the bumps seen in different regions of the detector. If this is the case, it would be good to mention it explicitly here (and possibly in the conclusions in line 366).
 
-> 
+> We agree that the cooling profile optimization needs more explanation, so we have added the following text: "In this scenario, depicted in Fig. 14, the cooling temperature begins at a relatively high value ($0^\circ$~C) to minimize the impact of the TID bump in the first two years of operation, thus avoiding a peak in the module power (see Fig. 14a). In subsequent years, $T_C$ is steadily decreased to maintain a sensor current at or below about 1~mA, as illustrated in Fig. 14b, in the interest of both minimizing the module power and avoiding thermal runaway."
+
+As to your suggestion that the timing of the TID bump can be tuned by modifying the running temperature, this could in principle work. However, all of the modules in the ITk strip and endcap systems are cooled using a common cooling system, and different regions of the detector cannot be maintained at different cooling temperatures. (This is typical of most silicon detectors.) Therefore there is limited flexibility to offset the timing of the TID bumps as you suggest.
 
 Line 344: I would avoid "former" and "latter", as they refer to a long sentence. I suggest using T_0=... and R_T=...
 
