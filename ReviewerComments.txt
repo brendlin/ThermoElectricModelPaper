@@ -6,11 +6,11 @@ Reviewer #1: The article is well written, clear and relevant. The only major com
 
 - Line 218-219: to understand the relevance of this optimised model, it would be useful to add a comparison of the maximal power drawn according to this model that takes in to account the different peaking times of the TID bumps with the maximum power that would be computed with a more traditional "sum of worst cases" approach.
 
-> KURT AND GEORG (CALCULATION)
+> We agree, and we think it's best to mention specific details in Section 7.4 (around line 317). Thus, we have added the following to line 219: "... as each chip reaches its maximum at a different point in time (see Section 7.4)."
 
 - Line 317: "ignoring this time dependence could lead to over-specification". Again: it would be good to know if it actually would lead to over-specification. The reader could be presented with some evidence, such as the power that would be needed in a non-time-optimized design.
 
-> KURT AND GEORG (CALCULATION)
+> We add the following example to L317: "Again, the different timescales of the various radiation-induced effects are visible; ignoring this time dependence could lead to over-specification of some system aspects. Taking Fig. 13b as an example, the average module power (indicated by the thick black line) is 6.6 W in the beginning of operation and reaches 8.0 W at the TID bump, in the second year. If we naively summed the maxima of the TID bumps, neglecting time dependence, we would arrive at 8.6 W, overestimating the power at the TID bump by 7.5% and overestimating the effect of the TID bump by 43%. The difference, multiplied in the endcap by 4608 modules, amounts to nearly 3 kW of power and impacts the specifications of e.g. the cooling system."
 
 Other considerations:
 
@@ -134,7 +134,10 @@ Fig. 7, caption: Besides the ASIC (bPOL12V or FEAST, which one is it?) the effic
 
 Fig. 8, caption:  "...presented as a function of time." Presumably this means time at the indicated dose rate.  This could be stated explicitly.
 
-> KURT
+> We have attempted to make this figure more clear. One unstated but important detail of the plot is the relationship between the time on the x-axis and the total ionizing dose. We have attempted to clarify this in the plot and the caption - see below:
+
+"Parameterization of the impact of ionizing radiation on the magnitude of the front-end chip digital current (the TID bump), presented as a function of time elapsed during detector operation. The current is multiplied by a scale factor that is modeled as a function of total ionizing dose, dose rate, and temperature, using a fit to experimental data. The figure presents four scenarios using two different chip temperatures and dose rates. The relationship between time and total ionizing dose is calculated assuming the detector operates for 180 days per year, 7.2 hours per day. The time that it takes to reach 1 MRad of total ionizing radiation is indicated on the figure for both dose rates."
+
 
 Line 263: Could you add a comparison or at least a coarse estimation how long this analysis would have taken if full FEA simulations had to be used.
 
@@ -143,3 +146,6 @@ Line 263: Could you add a comparison or at least a coarse estimation how long th
 Line 380: "...si bulk.." should probably read Si bulk
 
 > Fixed - thank you.
+
+Other typos that we fixed:
+ - 'PTAT' means 'proportional to absolute temperature' (not 'Point To...') - this has been fixed.
