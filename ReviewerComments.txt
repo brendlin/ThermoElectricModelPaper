@@ -16,11 +16,11 @@ Other considerations:
 
 Section 1.1 is clear, but possibly too detailed for the scope of this article. I would suggest to remove all details and features that are not also represented in Figure 4
 
-> ?
+> We would prefer to keep many of these details, in order to provide context for e.g. the thermal impedances presented in Figure 6, and the FEA results presented in Figure 15. However we have re-worked the text in order to improve the flow. To improve the section, have removed certain details that are repeated in Section 2 ("The electrical model"), defined the barrel stave, and introduced short-strip and long-strip modules in Section 1.1.
 
 Line 55: "stave" should be defined
 
-> GEORG
+> In the reshuffling of Section 1.1, this is now defined: "In the barrel, the local support is called a stave, ..."
 
 Figure 5: Please correct "Tape" into "Tape bus" to match the text
 
@@ -66,7 +66,7 @@ Line 273: A reference to the source of the HL-LHC luminosity profile would be go
 
 Line 274: "cooling profiles with temperatures as low as" -> is this referred to the coolant temperature?
 
-> 
+> We suggest the following change to improve clarity: "For the cooling, which can be adjusted during data taking using detector control systems, we studied flat (constant) coolant temperature profiles ranging from from 0C to -35C, the lowest evaporation temperature achievable with the ITk evaporative CO2 cooling system. We also studied a 'ramp' scenario in which the coolant temperature starts at 0C and is gradually lowered down to -35C over the course of 10 years (Fig. 9b)."
 
 Line 289: "The analytical model" -> it is unclear which model this refers to. The one in reference [5] or the one presented in this work?
 
@@ -102,11 +102,11 @@ Line 32: FEA should be spelled out once.
 
 Line 89: The LDO regulator seems to be called "linPOL12V" in Fig. 4 while the text says "(labelled bPOL12)".
 
-> 
+> It should read "labelled linPOL12V" as you say -- fixed. (Also switched to the British spelling of the word "labelled".)
 
 Line 90: "short-strip and long-strip modules" have not been introduced before. 
 
-> 
+> In the reshuffling of Section 1.1 (see a comment addressed from Reviewer #1), this is now defined: "Two types of module are used in the barrel: modules with 'short-strip' sensors of length 24.1~mm, and 'long-strip' sensor modules with 48.2~mm strip lengths. Short-strip modules are used in the two innermost barrel layers, and long-strip modules in the two outermost barrel layers, mainly for hit occupancy considerations."
 
 Line 94: The acronym GBLD is described wrongly as "Gigabit Tran-Impedance Amplifier".
 
@@ -114,7 +114,7 @@ Line 94: The acronym GBLD is described wrongly as "Gigabit Tran-Impedance Amplif
 
 Line 96: "... and an additional LDO regulator brings ..." In Fig. 4 this component ist labelled "DCDC2". Please clarify if this is an LDO or a DC-DC converter.
 
-> 
+> Fixed: "... and an additional DC-DC converter ('DCDC2') brings..."
 
 Line 110: "bias voltage" instead of "voltage bias" would be a more common wording (similarly in line 106).
 

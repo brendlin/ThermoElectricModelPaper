@@ -1,10 +1,10 @@
 
 The electrical model consists of low-voltage (LV) and high-voltage (HV) circuits, depicted in
-Fig.~\ref{electrical_model}. The LV current (supplied at 11~V) is used to power the hybrid controller chips (HCCs),
-ATLAS Binary Chips (ABCs) and Autonomous Monitoring and Control chip (AMAC) located on PCBs that are
+Fig.~\ref{electrical_model}. The LV current (supplied at 11~V) is used to power the hybrid controller chips (HCCs) \cite{Collaboration:2017mtb},
+ATLAS Binary Chips (ABCs) \cite{abc130} and Autonomous Monitoring and Control chip (AMAC) located on PCBs that are
 glued directly onto the surface of the sensor.
 These chips require between 1.5 and 3.3~V, which are provided by the temperature-dependent
-FEAST DC-DC converter (labeled bPOL12V in Fig.~\ref{electrical_model}) and an LDO (low-dropout) regulator (labeled bPOL12).
+FEAST DC-DC converter (labelled bPOL12V in Fig.~\ref{electrical_model}) and an LDO (low-dropout) regulator (labelled linPOL12V).
 The number of chips and converters on each module vary according to the design of
 each different module type (barrel short-strip and long-strip modules, and six different endcap
 module designs).
@@ -33,7 +33,7 @@ The electrical model of the ITk Strip barrel and endcap modules. Green arrows re
 The LV current is also delivered to the EOS card to power various data transfer components:
 the Gigabit Laser Driver (GBLD), low power GigaBit Transceiver (LpGBT) and Gigabit Trans-impedance Amplifier (GBTIA) chips.
 A FEAST identical to the one used on the module is used to step the
-voltage down from 11~V to 2.5~V, and an additional LDO regulator brings the voltage down further for some components.
+voltage down from 11~V to 2.5~V, and an additional DC-DC converter (`DCDC2') brings the voltage down further for some components.
 %% The EOS cards on the endcap petals and the long-strip staves have one GBLD and one LpGBT;
 %% EOS cards on the short-strip staves contain two of each. All EOS cards contain one GBTIA.
 The short-strip barrel staves contain two GBLD and LpGBT chips.
