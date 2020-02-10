@@ -63,12 +63,13 @@ The dashed lines represent a $\pm$20\% error band on the fit for $R_\text{CM}$.
 
 %END ALTERNATE DESCRIPTION
 
-For a barrel module, the agreement of the network temperatures using the thermal impedances from the fit with the data from FEA is better than 0.5$^\circ$C for all nodes. This procedure is performed for both an EOS module and a normal module. The thermal impedance from the sensor to the sink ($R_\text{CM}$) is consistently between 1.1 and 1.4~$^\circ$C/W, but higher values (between 10 and 20~$^\circ$C/W) are found for other impedances in the network ($R_\text{HCC}$ and $R_\text{FEAST}$), mostly because these are for components with a small footprint constituting a bottleneck for the heat flow.
+For the barrel, this procedure is performed for both an EOS module and a normal module, for short-strip and long-strip module types and for 6 different heat sources (24 module FEA simulations in total). In all cases, the agreement of the network temperatures using the thermal impedances from the fit with the data from FEA is better than 0.5$^\circ$C for all nodes. The thermal impedance from the sensor to the sink ($R_\text{CM}$) is consistently between 1.1 and 1.4~$^\circ$C/W, but higher values (between 10 and 20~$^\circ$C/W) are found for other impedances in the network ($R_\text{HCC}$ and $R_\text{FEAST}$), mostly because these are for components with a small footprint constituting a bottleneck for the heat flow.
 A 10\% uncertainty is assigned to the thermal impedances in the barrel modules for the purposes of assessing safety factors.
 
 % Endcap: 
-For the endcap modules, the procedure to determine the thermal impedances is performed for
-each of the 6 module types. $R_\text{CM}$ ranges from 0.6 to 1.4~$^\circ$C/W, with other nodes
+For the endcap, the procedure to determine the thermal impedances
+for each of the 6 module types used simulations of an endcap petal with 3 different heat sources (requiring 3 FEA simulations of a full petal).
+$R_\text{CM}$ ranges from 0.6 to 1.4~$^\circ$C/W, with other nodes
 between 5 and 20~$^\circ$C/W. Because the location of powered components is more irregular on an
 endcap module, the difference between the predicted temperatures of the linear network and the FEA
 can reach up to 1.2~$^\circ$C for key temperature-dependent nodes. Therefore, a 20\% uncertainty is assigned
