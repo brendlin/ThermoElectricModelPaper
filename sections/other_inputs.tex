@@ -71,10 +71,16 @@ many irradiation campaigns have been conducted using a variety of radiation sour
 the effect at different temperatures and dose rates.
 The data collected from these studies was used to develop a model of the TID bump
 that estimates the digital current increase given the total ionizing dose, the dose rate,
-and the operating temperature of the chip. This parametrization, which is depicted in
+and the operating temperature of the chip.
+The data was fitted using a 5-parameter model which was guided by assumptions on the underlying
+damage mechanisms, although the fit function had to be adjusted to achieve a satisfactory match to the data.
+The result of this parametrization, which is depicted in
 Fig~\ref{tid_bump}, is used as an input to the thermo-electrical model in order to correctly model the
 ABC and HCC currents. The TID bump is assumed to fully apply to the HCC digital current, and apply to
-69\% of the ABC digital current (according to our understanding of its digital circuitry).
+69\% of the ABC digital current\footnote{
+The primary source of the additional digital current is leakage in a certain type of transistor on the chip,
+which is only used in parts of the ABC. We have introduced the fraction factor described in the text
+to allow flexibility to scale this leakage current for different chip designs.}.
 
 The TID bump displays certain key features, which are reflected in the parametrization:
 first, the effect is larger at colder temperatures and higher dose rates. This means it can be

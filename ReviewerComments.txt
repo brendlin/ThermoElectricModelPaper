@@ -2,7 +2,7 @@
 Reviewer #1: The article is well written, clear and relevant. The only major comment regarding the content is that the relevance of the work could be enhanced substantially by showing the impact of this methodology against more traditional approaches (i.e. computing the cooling power needed for the worst case everywhere). There are three specific points where I feel this should be highlighted:
 - Line 133: it would be interesting to compare the results of the model presented here with those of [5] for the same objects, to highlight the significance of the presented method
 
-> GEORG ?
+> The difference between the approach taken in [5] and the current approach is simply that we use numerical methods to solve the equations instead of analytically solving them. Regardless of whether an equation is solved numerically or analytically, the result should be the same. We have added the following sentence: "We do not expect the numerical method to introduce a loss of precision on the scale of the model approximations."
 
 - Line 218-219: to understand the relevance of this optimised model, it would be useful to add a comparison of the maximal power drawn according to this model that takes in to account the different peaking times of the TID bumps with the maximum power that would be computed with a more traditional "sum of worst cases" approach.
 
@@ -24,7 +24,7 @@ Line 55: "stave" should be defined
 
 Figure 5: Please correct "Tape" into "Tape bus" to match the text
 
-> GEORG (FIGURE CHANGE)
+> Fixed - thanks!
 
 Line 105: It looks strange that the voltage drop is relevant in the endcap and negligible in the barrel. Adding the corresponding <DELTA>V would help clarify.
 
@@ -42,7 +42,7 @@ Line 120: for clarity of language I would replace "These sources consist of the"
 
 Lines 134-135, and further on on lines 262-262: Is there a specific reason why two different pieces of software (and languages) were used to model the barrel and end-cap? If so the reason would be of interest for the reader, otherwise I would suggest to remove this detail (distracting).
 
-> We have changed L134 to the following: "However, the set of equations is still sufficiently small to solve numerically using any modern programming language." We have removed the reference to software on L262.
+> We have changed L134 to the following: "However, the set of equations is still sufficiently small to solve numerically using any modern mathematical software." We have removed the reference to software on L262.
 
 Line 156: Please add to the text a figure for the "level of disagreement" here (±20%, if I well understood the picture), otherwise this piece of information is only available in Figure 6.
 
@@ -50,19 +50,19 @@ Line 156: Please add to the text a figure for the "level of disagreement" here (
 
 Footnote 3 page 6: a reference to "our subsequent studies" would be appropriate here.
 
-> GEORG / GRAHAM ?
+> There is no reference, as this was never published. We have reworded the footnote: "In Ref. [5] the analytic model parameters were extracted from the maximum sensor temperature predicted by FEA. Further comparisons we did after the publication of that paper indicated that the thermal stability limit is predicted more accurately if the average sensor temperature is used."
 
 Line 210: it is not totally clear where does 69% comes from. I would assume that the digital circuit, as understood by the authors, has 69% of its initial current drawn by a circuit suffering from TID bump and that the rest of the current, instead stays stable. A more detailed sentence might help here.
 
-> GEORG ?
+> We removed the parenthetical text and added a footnote at the end of the sentence: "The primary source of the additional digital current is leakage in a certain type of transistor on the chip, which is only used in parts of the ABC. We have introduced the fraction factor described in the text to allow flexibility to scale this leakage current for different chip designs."
 
 Line 232: Is the bump described here by a phenomenological model, or is there some kind of modelling of the underlying mechanism? Clarifying this would help understanding the extrapolation potential of this model.
 
-> GEORG / GRAHAM ?
+> We have included a sentence in the first paragraph of this section: "The data was fitted using a 5-parameter model which was guided by assumptions on the underlying damage mechanisms, although the fit function had to be adjusted to achieve a satisfactory match to the data. The result of this parametrization, which is depicted in Fig 8, ...."
 
 Line 273: A reference to the source of the HL-LHC luminosity profile would be good here.
 
-> GEORG ?
+> We have added the citation for the HL-LHC Technical Design Report.
 
 Line 274: "cooling profiles with temperatures as low as" -> is this referred to the coolant temperature?
 
