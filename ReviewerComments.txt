@@ -34,7 +34,7 @@ tape for each module and varies between 10.8 and 11~V. In both the barrel and en
 
 Line 118: the footnote 2, although interesting, is possibly out of place here and I would suggest removing it
 
-> Agreed - we have removed this footnote.
+> We would prefer to keep this footnote, to emphasize the similarity between the electrical and thermal networks. We have added a sentence to the beginning of the footnote to emphasize why it is relevant to our discussion: "The similarity of the electrical and thermal networks we are using in our approach has been exploited before: historically, ..."
 
 Line 120: for clarity of language I would replace "These sources consist of the" with a colon(:).
 
