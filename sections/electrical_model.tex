@@ -4,25 +4,28 @@ Fig.~\ref{electrical_model}. The LV current (supplied at 11~V) is used to power 
 ATLAS Binary Chips (ABCs) \cite{abc130} and Autonomous Monitoring and Control chip (AMAC) located on PCBs that are
 glued directly onto the surface of the sensor.
 These chips require between 1.5 and 3.3~V, which are provided by the temperature-dependent
-FEAST DC-DC converter (labelled bPOL12V in Fig.~\ref{electrical_model}) and an LDO (low-dropout) regulator (labelled linPOL12V).
+FEAST DC-DC converter\footnote{
+In the final version of the ITk strip system the FEAST chip is meant to be replaced by a chip
+with similar functionality and behaviour, called the bPOL12V chip; we use the term FEAST
+throughout this paper.} and an LDO (low-dropout) regulator (labelled linPOL12V in Fig.~\ref{electrical_model}).
 The number of chips and converters on each module vary according to the design of
 each different module type (barrel short-strip and long-strip modules, and six different endcap
 module designs).
 A barrel or endcap module contains 10--28 ABC chips, 1--4 HCCs, and
-1--2 of each of the other components (linPOL12V/bPOL12V/AMAC).
+1--2 of each of the other components (linPOL12V/FEAST/AMAC).
 
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=0.8\linewidth]{figures/electrical_model.pdf}
 \caption{
 The electrical model of the ITk Strip barrel and endcap modules. Green arrows represent temperature-dependent heat sources, while orange arrows are temperature-independent. Grey squares are chips.
-% Chip counts per module are linPOL12V/bPOL12/AMAC: 1 each (2 each for EC R3); HCC: 1 for barrel LS, 2 for barrel SS and EC R0-R2 and R4-R5, 4 for EC R3; ABC: barrel: 10, 20 (LS, SS), EC: 17, 21, 21, 28, 16, 18 (R0-R5).
+% Chip counts per module are linPOL12V/FEAST/AMAC: 1 each (2 each for EC R3); HCC: 1 for barrel LS, 2 for barrel SS and EC R0-R2 and R4-R5, 4 for EC R3; ABC: barrel: 10, 20 (LS, SS), EC: 17, 21, 21, 28, 16, 18 (R0-R5).
 }
 \label{electrical_model}
 \end{figure}
 
 %% The ABCs and HCCs are all powered at 1.5~V using a DC-DC converter (the FEAST) to step the voltage down
-%% from 11~V (linPOL12V and bPOL12V in Fig.~\ref{electrical_model}). Typically one FEAST per module is used to power the chips; however, due to the large
+%% from 11~V (linPOL12V and FEAST in Fig.~\ref{electrical_model}). Typically one FEAST per module is used to power the chips; however, due to the large
 %% number of ABCs on endcap module R3, the load is split across two FEAST converters on the module.
 
 %% The AMAC contains a component powered at 1.5~V and one powered at 3~V; both are delivered from the
