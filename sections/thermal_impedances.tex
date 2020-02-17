@@ -9,7 +9,7 @@ The cooling path between the sources dissipating electrical power and the coolin
 where the index $j$ runs over all powered nodes. (We have momentarily disregarded the contribution from the EOS card.)
 The expression includes an impedance term $R_\text{CM} \equiv R_\text{C} + R_\text{M}$, the common thermal pathway shared
 by the components. We omit the sensor thermal impedance in the definition of $R_\text{CM}$ because its contribution
-is negligible (roughly 0.02~C/W).
+is negligible (roughly 0.02~$^\circ$C/W).
 
 In order to extract the thermal impedances for the thermal network model, the finite element model is run multiple times, with each heat source (or group of similar sources) switched on in turn with a representative amount of heat. In each of these cases, the temperature is calculated for all nodes in the thermal network model (Fig.~\ref{fig:thermalmodel}). The temperature of a node is here taken as the average of the temperatures for all the grid points in the FEA model within the volume of the object corresponding to the node\footnote{This is particularly interesting in the case of the sensor, which fills a large volume, with a potentially large range of temperatures. In Ref.~\cite{Beck:2010zzd} the analytic model parameters were extracted from the maximum sensor temperature predicted by FEA. Further comparisons after the publication of that paper indicated that the thermal stability limit is predicted more accurately if the average sensor temperature is used.}. The thermal impedances are then obtained from a fit of Eq.~\ref{eq:deltaT_expression} using the temperature data for all nodes for all cases of heat injection.
 
@@ -66,7 +66,7 @@ The dashed lines represent a $\pm$20\% error band on the fit for $R_\text{CM}$.
 
 %END ALTERNATE DESCRIPTION
 
-For the barrel, this procedure is performed for both an EOS module and a normal module, for short-strip and long-strip module types and for 6 different heat sources (24 module FEA simulations in total). In all cases, the agreement of the network temperatures using the thermal impedances from the fit with the data from FEA is better than 0.5$^\circ$C for all nodes. The thermal impedance from the sensor to the sink ($R_\text{CM}$) is consistently between 1.1 and 1.4~$^\circ$C/W, but higher values (between 10 and 20~$^\circ$C/W) are found for other impedances in the network ($R_\text{HCC}$ and $R_\text{FEAST}$), mostly because these are for components with a small footprint constituting a bottleneck for the heat flow.
+For the barrel, this procedure is performed for both an EOS module and a normal module, for short-strip and long-strip module types and for 6 different heat sources (24 module FEA simulations in total). In all cases, the agreement of the network temperatures using the thermal impedances from the fit with the data from FEA is better than 0.5~$^\circ$C for all nodes. The thermal impedance from the sensor to the sink ($R_\text{CM}$) is consistently between 1.1 and 1.4~$^\circ$C/W, but higher values (between 10 and 20~$^\circ$C/W) are found for other impedances in the network ($R_\text{HCC}$ and $R_\text{FEAST}$), mostly because these are for components with a small footprint constituting a bottleneck for the heat flow.
 A 10\% uncertainty is assigned to the thermal impedances in the barrel modules for the purposes of assessing safety factors.
 
 % Endcap: 
