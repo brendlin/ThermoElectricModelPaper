@@ -5,7 +5,7 @@ The thermo-electrical model provides a wide range of predictions for the operati
 To study the different aspects of our predictions for the operation of the ITk strip system throughout its lifetime, we performed the calculation of the system parameters over the expected 14 years of operation in monthly steps as outlined in Section~\ref{sec:running}. Time-dependent operational inputs to the calculation were taken from the expected performance of the HL-LHC (Fig.~\ref{fig:lhc_profile}) \cite{ApollinariG.:2017ojx}. For the cooling, which can be adjusted during data taking using detector control systems, we studied flat (constant) coolant temperature profiles ranging from $0~^\circ$C to $-35~^\circ$C, the lowest evaporation temperature achievable with the ITk evaporative CO$_2$ cooling system. We also studied a `ramp' scenario in which the coolant temperature starts at 0~$^\circ$C and is gradually lowered down to $-35~^\circ$C over the course of 10 years (Fig.~\ref{fig:coolant_ramp}).
 % Consider adding above: The total ionizing dose rate (required to calculate the TID bump) and the NIEL fluence (used to determine the sensor leakage current) are calculated for each month using the information in Fig~\ref{fig:radiation} and Fig.~\ref{fig:lhc_profile}.
 
-\begin{figure}[ht]
+\begin{figure}[t!]
 \centering
 \subfloat[] {\label{fig:lhc_profile}  \includegraphics[width=0.45\linewidth]{figures/YearlyRunProfile.eps}}\quad\quad
 \subfloat[] {\label{fig:coolant_ramp} \includegraphics[width=0.45\linewidth]{figures/CoolantTemperature_RampScenario.eps}}
@@ -42,7 +42,7 @@ TID parametrization & Nominal/Pessimistic & Different data sets for fit of TID b
 \end{table}
 \let\arraystretch\arraystretcha %% reset the table spacing
 
-\begin{figure}[ht]
+\begin{figure}[t!]
 \centering
 \subfloat[] {\label{fig:safety_factors_a} \includegraphics[width=0.45\linewidth]{figures/CompareSafetyFactors_SensorTemperature_R3.eps}}\quad\quad
 \subfloat[] {\label{fig:safety_factors_b} \includegraphics[width=0.45\linewidth]{figures/CompareSafetyFactors_ModulePower_R3.eps}}
@@ -58,7 +58,7 @@ It is important to note that combining multiple safety factors can have a compou
 
 Several module properties predicted by the thermo-electrical model are shown in Figs.~\ref{fig:moduleflatperformance} and~\ref{fig:modulerampperformance} for the barrel system. The different radiation-dependent effects occur on different timescales. The maximum in the digital chip power due to the TID effect occurs relatively early (in year 1 to 4), although the bump has a long tail, particularly in the outer layers of the barrel. The sensor leakage power, on the other hand, grows towards the end of the lifetime of the ITk. If the leakage current continued to increase in the case of further irradiation, or if the cooling temperature were raised, this growth would ultimately lead to thermal runaway. Due to the radial dependence of the radiation environment, the radiation-induced effects are most pronounced in the innermost barrel layers.
 
-\begin{figure}[ht]
+\begin{figure}[t!]
 \centering
 \subfloat[] {\label{fig:moduleflatperformance_a} \includegraphics[width=0.45\linewidth]{figures/powerpermodule_v2.eps}}\quad\quad
 \subfloat[] {\label{fig:moduleflatperformance_b} \includegraphics[width=0.45\linewidth]{figures/Teosmodule_v2.eps}}
@@ -66,7 +66,7 @@ Several module properties predicted by the thermo-electrical model are shown in 
 \label{fig:moduleflatperformance}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[t!]
 \centering
 \subfloat[] {\label{fig:modulerampperformance_a} \includegraphics[width=0.45\linewidth]{figures/TSensor_v2.eps}}\quad\quad
 \subfloat[] {\label{fig:modulerampperformance_b} \includegraphics[width=0.45\linewidth]{figures/Peosmodule_v2.eps}}
@@ -86,7 +86,7 @@ Beyond the issue of stability, the thermo-electrical model delivers predictions 
 Taking Fig.~\ref{fig:systemperformance_b} as an example, the average module power (indicated by the thick black line) is 6.6~W in the beginning of operation and reaches 8.0~W at the TID bump, in the second year. If we naively summed the maxima of the TID bumps, neglecting time dependence, we would arrive at 8.6~W, overestimating the power at the TID bump by 7.5\% and overestimating the effect of the TID bump by 43\%.
 The difference, multiplied in the endcap by 4608 modules, amounts to nearly 3~kW of power and impacts the specifications of e.g. the cooling system.
 
-\begin{figure}[ht]
+\begin{figure}[t!]
 \centering
 \subfloat[] {\label{fig:systemperformance_a} \includegraphics[width=0.45\linewidth]{figures/Totalbarrelpower-30_v2.eps}}\quad\quad
 \subfloat[] {\label{fig:systemperformance_b} \includegraphics[width=0.45\linewidth]{figures/Endcap_ModulePower.eps}}
@@ -99,7 +99,7 @@ The predictions from this model are now used throughout the strip project to con
 Because of the different timescales for the peak power due to the TID effect and the radiation-induced sensor leakage, there is room to optimize the cooling temperature profile to minimize the total power in the strip system while avoiding thermal runaway. The thermo-electrical model is a powerful tool to plan such an optimized cooling profile. In fact, the cooling `ramp' scenario introduced in Section~\ref{sec:opscenarios} is the result of such an optimization.
 In this scenario, depicted in Fig.~\ref{fig:rampoptimization}, the cooling temperature begins at a relatively high value ($0~^\circ$C) to minimize the impact of the TID bump in the first two years of operation, thus avoiding a peak in the module power (see Fig.~\ref{fig:rampoptimization_a}). In subsequent years, $T_C$ is steadily decreased to maintain a sensor current at or below about 1~mA, as illustrated in Fig.~\ref{fig:rampoptimization_b}, in the interest of both minimizing the module power and avoiding thermal runaway.
 
-\begin{figure}[ht]
+\begin{figure}[t!]
 \centering
 \subfloat[] {\label{fig:rampoptimization_a} \includegraphics[width=0.45\linewidth]{figures/ModulePower_R1_newramp.eps}}\quad\quad
 \subfloat[] {\label{fig:rampoptimization_b} \includegraphics[width=0.45\linewidth]{figures/SensorCurrent_R1_newramp.eps}}

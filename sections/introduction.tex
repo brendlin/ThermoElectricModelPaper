@@ -16,16 +16,16 @@ The strip system for the ATLAS Phase-II upgrade consists of two parts: the barre
 
 The basic unit of the detector is the silicon-strip module. Modules are composed of sensors with hybrids on top, which host the front-end chips as well as circuitry to convert the supply voltage to the chip voltages. The modules are glued onto both sides of a composite sandwich (local support) that contains two parallel thin-wall titanium cooling pipes embedded in carbon foam (Allcomp K9) between two facesheets of ultra-high-modulus carbon fibre (3 layers of K13C2U/EX1515) co-cured together with a Kapton/copper low-mass tape. During operation, cooling will be achieved by evaporating CO$_2$ in the cooling pipes with a final target temperature no higher than $-35~^\circ$C anywhere along the local support.
 
-In the barrel, the local support is called a stave, onto which 14 modules made with square sensors ($96.85\times 96.72$~mm$^2$) are loaded. Two types of module are used in the barrel: modules with `short-strip' sensors of length 24.1~mm, and `long-strip' sensor modules with 48.2~mm strip lengths. Short-strip modules are used in the two innermost barrel layers, and long-strip modules in the two outermost barrel layers, mainly for hit occupancy considerations. A model of the short-strip barrel stave geometry is shown in Fig.~\ref{fig:barrelgeometry}.
-
-The geometry of the barrel stave is uniform along its length, with the exception of the end region of the stave, where an End-Of-Substructure (EOS) card is mounted on both surfaces. The EOS card shares part of its heat path with the adjacent module; underneath this module (hereafter referred to as an `EOS module'), the thermal path is degraded by the presence of electrically-insulating ceramic pipe sections. The thermal and electrical properties of an EOS module are sufficiently different from other modules along the length of the stave (`normal modules') to warrant separate treatment in the thermo-electrical model of the barrel.
-
-\begin{figure}[ht]
+\begin{figure}[t!]
 \centering
 \includegraphics[width=0.8\linewidth]{figures/stave.pdf}
 \caption{Strip barrel local support geometry. On the left, a complete stave is shown (EOS card in the foreground). The right picture shows a cross-section of the stave with the two cooling pipes visible inside the core. }
 \label{fig:barrelgeometry}
 \end{figure}
+
+In the barrel, the local support is called a stave, onto which 14 modules made with square sensors ($96.85\times 96.72$~mm$^2$) are loaded. Two types of module are used in the barrel: modules with `short-strip' sensors of length 24.1~mm, and `long-strip' sensor modules with 48.2~mm strip lengths. Short-strip modules are used in the two innermost barrel layers, and long-strip modules in the two outermost barrel layers, mainly for hit occupancy considerations. A model of the short-strip barrel stave geometry is shown in Fig.~\ref{fig:barrelgeometry}.
+
+The geometry of the barrel stave is uniform along its length, with the exception of the end region of the stave, where an End-Of-Substructure (EOS) card is mounted on both surfaces. The EOS card shares part of its heat path with the adjacent module; underneath this module (hereafter referred to as an `EOS module'), the thermal path is degraded by the presence of electrically-insulating ceramic pipe sections. The thermal and electrical properties of an EOS module are sufficiently different from other modules along the length of the stave (`normal modules') to warrant separate treatment in the thermo-electrical model of the barrel.
 
 The endcap system consists of two endcaps composed of 6 disks each.
 Each disk contains 32 `petals,' the local substructure depicted in Fig.~\ref{fig:endcapgeometry}.
@@ -39,7 +39,7 @@ cooling pipes run directly underneath it without a shared heat path, in contrast
 Because of the unique geometry of each module in a petal, each of the six different types of module is
 modelled separately in the thermo-electrical model.
 
-\begin{figure}[ht]
+\begin{figure}[t!]
 \centering
 \includegraphics[width=0.8\linewidth]{figures/petal_and_closeup.pdf}
 \caption{The geometry of the endcap strip petal, featuring 6 distinct module designs. A close-up of the R0 module is shown on the right.}
