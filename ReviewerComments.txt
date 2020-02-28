@@ -1,4 +1,9 @@
 
+Dear reviewers,
+
+Thank you for your comments and suggestions! We have implemented the vast majority of them in our revised submission. Below are our responses to your suggestions/questions:
+
+
 Reviewer #1: The article is well written, clear and relevant. The only major comment regarding the content is that the relevance of the work could be enhanced substantially by showing the impact of this methodology against more traditional approaches (i.e. computing the cooling power needed for the worst case everywhere). There are three specific points where I feel this should be highlighted:
 - Line 133: it would be interesting to compare the results of the model presented here with those of [5] for the same objects, to highlight the significance of the presented method
 
@@ -87,6 +92,7 @@ Line 344: I would avoid "former" and "latter", as they refer to a long sentence.
 > Fixed as suggested.
 
 
+
 Reviewer #2: This article describes a method which can be used to simulate the thermal behaviour of a silicon tracking detector. Compared to a full FEA simulation it uses a very simple representation of the system which can be solved rapidly. This enables the authors to simulate quickly variations of the system parameters and in particular the development of the thermal behaviour of the system with operation time (and therefore irradiation). The achievement lies in the careful determination of the parameters of the simplified model and in the verification of the model through a comparison with full FEA simulations. A verification by measurements on a real representation of the system is, however, missing. Thermal runaway is a particular danger to a silicon tracking detector, caused by the exponential dependence of the radiation induced leakage current on the temperature. The simplified model is used by the authors to evaluate the bounds of safe operation of the ATLAS Phase
 II silicon tracker, considering several sources of systematic uncertainties and performing the simulation for many different locations in the tracking system. This is an important input to the design optimization of such a tracking system and a necessary requirement to sign off the final design. With full FEA simulations the effort to achieve similar results would very likely be prohibitive.
 
@@ -142,7 +148,6 @@ Fig. 8, caption:  "...presented as a function of time." Presumably this means ti
 
 "Parameterization of the impact of ionizing radiation on the magnitude of the front-end chip digital current (the TID bump), presented as a function of time elapsed during detector operation. The current is multiplied by a scale factor that is modeled as a function of total ionizing dose, dose rate, and temperature, using a fit to experimental data. The figure presents four scenarios using two different chip temperatures and dose rates. The relationship between time and total ionizing dose is calculated assuming the detector operates for 180 days per year, 7.2 hours per day. The time that it takes to reach 1 MRad of total ionizing radiation is indicated on the figure for both dose rates."
 
-
 Line 263: Could you add a comparison or at least a coarse estimation how long this analysis would have taken if full FEA simulations had to be used.
 
 >  We have added the following statement to Section 6 ("Running the model"): "The calculation for a set of operating conditions over the full lifetime of the LHC, in steps of one month, takes between 5 and 10 minutes on a standard PC. The results represent the equivalent of simulating 1152 barrel modules and 5184 endcap modules, if the same time granularity would be required\footnote{Recall from Section 4 that the thermo-electrical model requires 24 barrel module FEA simulations and 3 endcap petal FEA simulations to extract the thermal impedances, but this procedure is only performed once.}. For comparison, the processing time for a single steady-state FEA simulation of an endcap petal is about 20 minutes (not taking into account the time needed to set the parameters of the simulation). Thus, the thermo-electrical model enables a quick turn-around for systematic studies of the parameter space that would not be possible using FEA alone."
@@ -153,5 +158,17 @@ Line 380: "...si bulk.." should probably read Si bulk
 
 > Fixed - thank you.
 
+
+
 Other typos that we fixed:
  - 'PTAT' means 'proportional to absolute temperature' (not 'Point To...') - this has been fixed.
+
+We also addressed in the figures and captions the following two comments:
+ - insert (colour online) into the caption of Fig. 3, 6, 13, 15
+ - different line shapes/or symbols to characterize the different lines in Fig. 7, 8, 10, 11, 12, 13b, 14
+
+And we generally tried to improve the clarity and style of the plots.
+
+Thank you again,
+
+The authors
