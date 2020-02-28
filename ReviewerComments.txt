@@ -132,7 +132,9 @@ Line 177: This section describes three temperature dependent effects (5.1, 5.2, 
 
 Fig. 7, caption: Besides the ASIC (bPOL12V or FEAST, which one is it?) the efficiency depends on the resistance of the main inductor of the converter. It would be helpful if the type of inductor was specified (inductance and resistance).
 
-> 
+> As stated in an earlier comment, we now refer to the asic as the FEAST throughout the paper. We have added the inductor detail in the text:
+"The DC-DC converter, which features an air-core inductor and is controlled by the FEAST chip, ..." and we have added a reference to the
+DC-DC converter data sheet for those who want more details: "Development of DCDC converters @ CERN. URL https://project-dcdc.web.cern.ch/project-dcdc/".
 
 Fig. 8, caption:  "...presented as a function of time." Presumably this means time at the indicated dose rate.  This could be stated explicitly.
 
